@@ -12,6 +12,7 @@ namespace HopZone.Controllers
         // GET: User
         public ActionResult Index()
         {
+            Console.WriteLine("test");
             return View();
         }
 
