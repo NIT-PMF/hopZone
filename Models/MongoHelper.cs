@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using MongoDB.Driver;
 
 namespace HopZone.Models
@@ -22,7 +19,7 @@ namespace HopZone.Models
                 client = new MongoClient(MongoConnection);
                 database = client.GetDatabase(MongoDatebase);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 throw e;
             }

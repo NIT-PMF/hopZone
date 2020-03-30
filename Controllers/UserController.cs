@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,7 +23,7 @@ namespace HopZone.Controllers
         // GET: User/Create
         public ActionResult Create()
         {
-            
+
             return View();
         }
 
@@ -47,8 +45,8 @@ namespace HopZone.Controllers
                     firstName = collection["firstName"],
                     lastName = collection["lastName"],
                     eMail = collection["eMail"]
-                }) ;
-                
+                });
+
                 return RedirectToAction(nameof(Index));
             }
             catch
