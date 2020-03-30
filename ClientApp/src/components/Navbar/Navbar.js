@@ -1,5 +1,5 @@
 ﻿import './index.css';
-//import logo from 'public/images/logoHopzone.svg'; 
+import logo from '../../images/logoHopzone.svg'; 
 import React from 'react';
 
 const Navbar = () => {
@@ -8,8 +8,9 @@ const Navbar = () => {
             <ol className="nav-list">
                 <li className="nav-item">
                     <img
-                        //src={logo}
+                        src={logo}
                         alt='website-logo'
+                        width="10%"
                     />
                 </li>
                 <li className="nav-item">Home</li>

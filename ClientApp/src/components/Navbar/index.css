@@ -1,9 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
 
-.nav-list
-{
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-component {
+    background-color: #61c6c6;
+}
+
+.nav-list {
     display: flex;
     justify-content: space-around;
     font-family: 'Roboto', sans-serif;
     list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 1em;
+}
+
+.nav-item {
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 1.2rem;
 }
