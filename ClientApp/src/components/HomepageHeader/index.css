@@ -1,20 +1,33 @@
-﻿.header-main {
+﻿body {
+    overflow: hidden;
+}
+.header-main {
+    position: relative;
     height: 25rem;
-    width: 100%;
     background-color: #61c6c6;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
+.noMargin {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.circles {
+    z-index: 1;
+}
+
 .main-header-signUp {
+    position: relative;
     margin-top: 20em;
     text-align: center;
+    z-index: 2;
 }
 
 .header-main:after {
     content: '';
-    width: 100%;
     height: 60rem;
     position: absolute;
     background: inherit;
@@ -28,9 +41,11 @@
 }
 
 .main-header-text {
+    position: relative;
     margin: 2em auto 0 auto;
     color: #f1eeee;
     font-size: 1.5vw;
     width: 30em;
     text-align: center;
+    z-index: 2;
 }
