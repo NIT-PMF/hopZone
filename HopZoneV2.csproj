@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="ClientApp\src\images\logoHopzone.svg">
+    <None Update="ClientApp\src\assets\images\logoHopzone.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

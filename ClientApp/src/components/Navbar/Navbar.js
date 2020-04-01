@@ -1,12 +1,12 @@
 ﻿import './index.css';
-import logo from '../../images/logoHopzone.svg'; 
+import logo from '../../assets/images/logoHopzone.svg'; 
 import React from 'react';
 
 const Navbar = () => {
     return (
         <div className="navigation-component">
             <ol className="nav-list">
-                <li className="nav-item">
+                <li className="nav-item-logo">
                     <img
                         src={logo}
                         alt='website-logo'

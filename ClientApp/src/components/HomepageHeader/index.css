@@ -1,0 +1,36 @@
+﻿.header-main {
+    height: 25rem;
+    width: 100%;
+    background-color: #61c6c6;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-header-signUp {
+    margin-top: 20em;
+    text-align: center;
+}
+
+.header-main:after {
+    content: '';
+    width: 100%;
+    height: 60rem;
+    position: absolute;
+    background: inherit;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform-origin: top left;
+    transform: skewY(4deg);
+    z-index: -1;
+}
+
+.main-header-text {
+    margin: 2em auto 0 auto;
+    color: #f1eeee;
+    font-size: 1.5vw;
+    width: 30em;
+    text-align: center;
+}

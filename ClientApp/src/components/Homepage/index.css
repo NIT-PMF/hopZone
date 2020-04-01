@@ -1,1 +1,7 @@
-﻿
+﻿body {
+    background-color: #f1eeee;
+}
+
+.main-container-homepage {
+    margin-top: 30vh;
+}

@@ -1,0 +1,16 @@
+﻿.btn-primary-design {
+    display: inline-block;
+    background-color: #ec4c4c;
+    padding: 15px 20px;
+    color: #f1eeee;
+    width: 150px;
+    box-shadow: 0 0 3px 0 #000000;
+}
+
+.btn-primary-design:hover {
+    cursor: pointer;
+}
+
+.btn-primary-text {
+    text-align: center;
+}
