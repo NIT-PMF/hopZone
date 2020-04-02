@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
 import CircleComponent from '../CircleComponent/CircleComponent';
+import phoneLogo from '../../assets/images/phoneLogo.svg';
+import mapPin from '../../assets/images/map-pin-image.svg';
 
 const HomepageHeader = () => {
 
@@ -24,6 +26,9 @@ const HomepageHeader = () => {
 
     return (
         <Container fluid={true}>
+            <span className="background-image"></span>
+            <img src={mapPin} className="map-pin-image" />
+            <img src={phoneLogo} className="phone-image" />
             <div className="header-main">
                 <Row noGutters>
                     <Col>
@@ -31,7 +36,7 @@ const HomepageHeader = () => {
                             {circleDesign().map(circle => <CircleComponent top={circle.top} right={circle.right} radius={circle.radius} />)}
                         </span>
 
-                    <div className="main-header-signUp">
+                    <div className="main-header-buttons">
                             <ButtonPrimary> Sign Up </ButtonPrimary>
                             <ButtonPrimary> Login </ButtonPrimary>
                     </div>

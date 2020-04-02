@@ -1,10 +1,37 @@
 ﻿body {
     overflow: hidden;
+    min-height: 100vh;
 }
+
+.background-image {
+    position: absolute;
+    top: 0;
+    background-image: url("../../assets/images/header-main-background.svg");
+    background-position: calc(50% - 50px) 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 110%;
+    height: 100%;
+}
+
+.phone-image {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    z-index: 2;
+    height: 500px;
+}
+
+.map-pin-image {
+    position: absolute;
+    top: 11%;
+    right: 13%;
+    z-index: 3;
+    height: 250px;
+}
+
 .header-main {
     position: relative;
-    height: 25rem;
-    background-color: #61c6c6;
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
@@ -19,13 +46,13 @@
     z-index: 1;
 }
 
-.main-header-signUp {
+.main-header-buttons {
     position: relative;
     margin-top: 20em;
     text-align: center;
     z-index: 2;
 }
-
+/*
 .header-main:after {
     content: '';
     height: 60rem;
@@ -39,7 +66,7 @@
     transform: skewY(4deg);
     z-index: -1;
 }
-
+*/
 .main-header-text {
     position: relative;
     margin: 2em auto 0 auto;

@@ -5,7 +5,7 @@ html, body {
 }
 
 .navigation-component {
-    background-color: #61c6c6;
+    background-color: none;
     z-index: 100;
     position: relative;
     /*position: fixed;*/
