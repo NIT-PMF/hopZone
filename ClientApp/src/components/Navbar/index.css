@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 html, body {
     margin: 0;
     padding: 0;
@@ -15,7 +14,6 @@ html, body {
 .nav-list {
     display: flex;
     justify-content: space-around;
-    font-family: 'Roboto', sans-serif;
     list-style: none;
     align-items: center;
     margin: 0;
@@ -23,14 +21,27 @@ html, body {
 }
 
 .nav-item {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
     color: #f1eeee;
-    font-weight: 300;
+    letter-spacing: .1rem;
     font-size: 1.4rem;
     padding: 10px 25px;
+    margin: 0 10px;
 }
 
-    .nav-item:hover {
-        background-color: #f1eeee;
-        color: #000000;
-        border-radius: 15px;
-    }
+.nav-item:hover {
+    background-color: #f1eeee;
+    color: #000000;
+    border-radius: 15px;
+}
+
+.nav-primary {
+    font-weight: bold;
+    background-color: #ec4c4c;
+    border-radius: 15px;
+}
+
+.nav-item-logo {
+    flex: 2;
+}

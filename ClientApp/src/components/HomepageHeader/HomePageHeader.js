@@ -32,7 +32,8 @@ const HomepageHeader = () => {
                         </span>
 
                     <div className="main-header-signUp">
-                        <ButtonPrimary> Sign Up </ButtonPrimary>
+                            <ButtonPrimary> Sign Up </ButtonPrimary>
+                            <ButtonPrimary> Login </ButtonPrimary>
                     </div>
                     <Col sm={{ size: 'auto'}}>
                     <h1 className="main-header-text">
