@@ -86,8 +86,8 @@
     float: left;
     top: 10%;
     left: 1%;
-    width: 150px;
-    height: 150px;
+    width: 11%;
+    height: 40%;
     border-radius: 50%;
     background-color: #57C6DE;
     opacity: 0.7;
@@ -99,21 +99,21 @@
     float: left;
     top: 8%;
     left: 6%;
-    width: 120px;
-    height: 120px;
+    width: 8%;
+    height: 30%;
     border-radius: 50%;
     background-color: #57C6DE;
     opacity: 0.7;
     z-index: 1;
-    animation: example 3s infinite;
+    animation: example 4s infinite;
 }
 .circle4 {
     position: absolute;
     float: left;
     top: 18%;
     left: 47%;
-    width: 120px;
-    height: 120px;
+    width: 8%;
+    height: 30%;
     border-radius: 50%;
     background-color: #57C6DE;
     opacity: 0.7;
@@ -126,13 +126,13 @@
     float: left;
     top: 10%;
     left: 40%;
-    width: 150px;
-    height: 150px;
+    width: 11%;
+    height: 40%;
     border-radius: 50%;
     background-color: #57C6DE;
     opacity: 0.7;
     z-index: 1;
-    animation: example 3s infinite;
+    animation: example 4s infinite;
 }
 
 
@@ -141,8 +141,8 @@
     float: left;
     top: 80%;
     left: 80%;
-    width: 150px;
-    height: 150px;
+    width: 11%;
+    height: 40%;
     border-radius: 50%;
     background-color: #3860ED;
     opacity: 0.4;
@@ -155,13 +155,13 @@
     float: left;
     top: 90%;
     left: 88%;
-    width: 180px;
-    height: 180px;
+    width: 15%;
+    height: 55%;
     border-radius: 50%;
     background-color: #3860ED;
     opacity: 0.4;
     z-index: 1;
-    animation: example 3s infinite;
+    animation: example 4s infinite;
 }
 
 .circle-text {
@@ -169,8 +169,8 @@
     float: left;
     top: 90%;
     left: 1%;
-    width: 100px;
-    height: 100px;
+    width: 8%;
+    height: 30%;
     border-radius: 50%;
     background-color: #57C6DE;
     opacity: 0.7;
@@ -183,13 +183,13 @@
     float: left;
     top: 90%;
     left: 6%;
-    width: 80px;
-    height: 80px;
+    width: 5%;
+    height: 20%;
     border-radius: 50%;
     background-color: #57C6DE;
     opacity: 0.7;
     z-index: 1;
-    animation: example 3s infinite;
+    animation: example 4s infinite;
 }
 
 /*Animatio*/
