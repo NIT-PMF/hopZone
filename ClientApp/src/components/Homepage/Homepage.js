@@ -3,14 +3,19 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import HomepageHeader from '../HomepageHeader/HomePageHeader';
 import CardPrimary from '../CardPrimary/CardPrimary';
+import Footer from '../Footer/Footer';
+import footerImage from '../../assets/images/header-main-footer.svg';
+
 
 
 const Homepage = () => {
     return (
+        <div>
         <header className="homepage-main">
                 <Row>
                     <HomepageHeader />
             </Row>
+        </header>
             <Container fluid className="main-container-homepage">
                 <Row>
                     <Col xs="auto">
@@ -25,7 +30,12 @@ const Homepage = () => {
                         </Col>
                 </Row>
             </Container>
-        </header>
+
+            <div className="footer-homepage">
+                <img className="footer-image" src={footerImage} alt="Website Footer" />
+                </div>
+            </div>
+
     )
 }
 

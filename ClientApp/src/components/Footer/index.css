@@ -1,9 +1,10 @@
 ﻿.footer-main {
     display: flex;
+    position: absolute;
+    bottom: 0;
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #EA4B4F;
     overflow: hidden;
     height: 100px;
 }
@@ -11,4 +12,10 @@
 .footer-content {
     text-align: center;
     color: #F1EEEE;
+}
+
+.footer-image {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

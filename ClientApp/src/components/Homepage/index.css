@@ -3,8 +3,14 @@
     min-height: 100vh;
 }
 
+.homepage-main {
+    z-index: -1;
+}
+
 .main-container-homepage {
+    position: relative;
     margin-top: 30vh;
+    display: block;
 }
 
 .main-content {
@@ -16,7 +22,7 @@
     transform: rotate(-1deg);
     position: relative;
     float: left;
-    margin: 20px 0 30px 20px;
+    margin: 20px 0 40px 20px;
 }
 
 .card-add-info {
@@ -28,6 +34,17 @@
     margin: 30px 20px 50px;
 }
 
+.footer-homepage {
+    margin-top: 35vh;
+    position: absolute;
+    transform: translateY(20px) scaleX(1.1);
+    width: 100%;
+    z-index: -2;
+}
+
+.footer-image {
+    width: 100%;
+}
 
 @media screen and (max-width: 720px) {
 

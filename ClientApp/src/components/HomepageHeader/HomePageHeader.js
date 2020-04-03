@@ -88,7 +88,7 @@ const HomepageHeader = () => {
                     </Col>
                 </Row>
                 </div>
-                </span>
+            </span>
         </Container>
 
     )

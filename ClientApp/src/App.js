@@ -14,7 +14,6 @@ const App = () => {
                     <Route path="/" exact component={Homepage} />
                     <Route path="/About" component={About} />
                 </Switch>
-                <Footer>NIT@2020</Footer>
             </div>
         </Router>
     )
