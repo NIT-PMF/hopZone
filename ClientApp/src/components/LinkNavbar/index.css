@@ -1,8 +1,8 @@
 ﻿li.nav-item {
     font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    font-weight: 500;
     letter-spacing: .1rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin: 0 10px;
     transition: all 0.5s;
 }
@@ -25,4 +25,11 @@ a.link-navigation {
 
 li.nav-item:hover a {
     color: #000000;
+}
+
+
+@media screen and (max-width: 720px) {
+    li.nav-item {
+        display: none;
+    }
 }

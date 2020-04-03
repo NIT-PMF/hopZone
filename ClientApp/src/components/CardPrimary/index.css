@@ -1,0 +1,22 @@
+﻿.card-primary-design {
+    position: relative;
+    display: inline-block;
+    background-color: #24CFD0;
+    border-radius: 25em 0;
+    z-index: 3;
+    border: .5px solid rgba(56,96,237, .5);
+    -webkit-box-shadow: 7px 20px 36px 1px rgba(87,198,222, 0.75);
+    -moz-box-shadow: 7px 20px 36px 1px rgba(87,198,222, 0.75);
+    box-shadow: 7px 20px 36px 1px rgba(87,198,222, 0.75);
+}
+
+.card-primary-text {
+    padding: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 720px) {
+    .card-primary-design {
+        border-radius: 10em 0;
+    }
+}

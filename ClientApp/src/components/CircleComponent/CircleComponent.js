@@ -5,7 +5,7 @@ const CircleComponent = (props) => {
 
     const circlePosition = {
         top: props.top,
-        right: props.right,
+        left: props.left,
         height: (props.radius + 'px'),
         width: (props.radius + 'px')
     }

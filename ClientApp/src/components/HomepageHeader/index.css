@@ -1,5 +1,5 @@
 ﻿﻿body {
-    overflow: hidden;
+    overflow-x: hidden;
     min-height: 100vh;
 }
 
@@ -14,20 +14,31 @@
     height: 100%;
 }
 
+.header-content {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.images-page-header {
+    flex: 1;
+}
+
 .phone-image {
     position: absolute;
     top: 20%;
     right: 18%;
     z-index: 2;
-    height: 70%;
+    height: 50vh;
 }
 
 .map-pin-image {
     position: absolute;
-    top: 38%;
-    right: 22%;
+    top: 60%;
+    right: 27%;
     z-index: 3;
-    height: 35%;
+    height: 20vh;
 }
 
 .header-main {
@@ -41,10 +52,6 @@
 .noMargin {
     margin-left: 0 !important;
     margin-right: 0 !important;
-}
-
-.circles {
-    z-index: 1;
 }
 
 .main-header-buttons {
@@ -79,138 +86,8 @@
     z-index: 2;
 }
 
-
-
-.circle {
-    position: absolute;
-    float: left;
-    top: 10%;
-    left: 1%;
-    width: 11%;
-    height: 40%;
-    border-radius: 50%;
-    background-color: #57C6DE;
-    opacity: 0.7;
-    z-index: 1;
-    animation: example 3s infinite;
-}
-.circle2 {
-    position: absolute;
-    float: left;
-    top: 8%;
-    left: 6%;
-    width: 8%;
-    height: 30%;
-    border-radius: 50%;
-    background-color: #57C6DE;
-    opacity: 0.7;
-    z-index: 1;
-    animation: example 4s infinite;
-}
-.circle4 {
-    position: absolute;
-    float: left;
-    top: 18%;
-    left: 47%;
-    width: 8%;
-    height: 30%;
-    border-radius: 50%;
-    background-color: #57C6DE;
-    opacity: 0.7;
-    z-index: 1;
-    animation: example 3s infinite;
-}
-
-.circle3 {
-    position: absolute;
-    float: left;
-    top: 10%;
-    left: 40%;
-    width: 11%;
-    height: 40%;
-    border-radius: 50%;
-    background-color: #57C6DE;
-    opacity: 0.7;
-    z-index: 1;
-    animation: example 4s infinite;
+.circles {
+    position: relative;
 }
 
 
-.circle-mob {
-    position: absolute;
-    float: left;
-    top: 80%;
-    left: 80%;
-    width: 11%;
-    height: 40%;
-    border-radius: 50%;
-    background-color: #3860ED;
-    opacity: 0.4;
-    z-index: 1;
-    animation: example 3s infinite;
-}
-
-.circle-mob2 {
-    position: absolute;
-    float: left;
-    top: 90%;
-    left: 88%;
-    width: 15%;
-    height: 55%;
-    border-radius: 50%;
-    background-color: #3860ED;
-    opacity: 0.4;
-    z-index: 1;
-    animation: example 4s infinite;
-}
-
-.circle-text {
-    position: absolute;
-    float: left;
-    top: 90%;
-    left: 1%;
-    width: 8%;
-    height: 30%;
-    border-radius: 50%;
-    background-color: #57C6DE;
-    opacity: 0.7;
-    z-index: 1;
-    animation: example 3s infinite;
-}
-
-.circle-text2 {
-    position: absolute;
-    float: left;
-    top: 90%;
-    left: 6%;
-    width: 5%;
-    height: 20%;
-    border-radius: 50%;
-    background-color: #57C6DE;
-    opacity: 0.7;
-    z-index: 1;
-    animation: example 4s infinite;
-}
-
-/*Animatio*/
-@keyframes example {
-    0% {
-        -webkit-transform: translateX(0px);
-    }
-
-    25% {
-        -webkit-transform: translateX(7px)
-    }
-
-    50% {
-        -webkit-transform: translateX(0px);
-    }
-
-    75% {
-        -webkit-transform: translateX(7px)
-    }
-
-    100% {
-        -webkit-transform: translateX(0px);
-    }
-}

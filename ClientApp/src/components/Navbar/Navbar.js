@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="navigation-component">
             <ol className="nav-list">
                 <li className="nav-item-logo">
-                    <Logo width={'10%'} />
+                    <Logo width={'15%'} />
                 </li>
                 <LinkNavbar>Home</LinkNavbar>
                 <LinkNavbar>About</LinkNavbar>

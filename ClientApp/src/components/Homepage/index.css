@@ -1,7 +1,41 @@
 ﻿body {
     background-color: #f1eeee;
+    min-height: 100vh;
 }
 
 .main-container-homepage {
     margin-top: 30vh;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-features {
+    transform: rotate(-1deg);
+    position: relative;
+    float: left;
+    margin: 20px 0 30px 20px;
+}
+
+.card-add-info {
+    transform: rotate(1deg);
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    float: right;
+    margin: 30px 20px 50px;
+}
+
+
+@media screen and (max-width: 720px) {
+
+    .card-features {
+        transform: rotate(0);
+    }
+
+    .card-add-info {
+        transform: rotate(0);
+    }
 }
