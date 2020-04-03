@@ -1,6 +1,7 @@
 ﻿import './index.css';
 import Logo from '../Logo/Logo'; 
 import LinkNavbar from '../LinkNavbar/LinkNavbar';
+import logo from '../../assets/images/logoHopzone.svg';
 import React from 'react';
 
 const Navbar = () => {
