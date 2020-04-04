@@ -38,8 +38,9 @@ const AboutPage = () => {
                             <cite> "It is our choices, Harry, that show what we truly are, far more than our abilities." </cite>
                             <br />
                             <img className="members-image" src={Naser} alt="Naser" />
-                            HopZone back-end Developer |
-                            Naser Abd El-Ilah
+                            HopZone back-end Developer 
+                            <br />
+                            <strong>Naser Abd El-Ilah</strong>
                         </p>
                     </div>
                     <div style={styleOneMember} className="member-irhad">
@@ -47,8 +48,9 @@ const AboutPage = () => {
                             <cite> "The way to get started is to quit talking and begin doing." </cite>
                             <br />
                             <img className="members-image" src={Irhad} alt="Irhad" />
-                        HopZone Designer |
-                            Irhad Fejzić
+                        HopZone Designer
+                            <br />
+                            <strong>Irhad Fejzić</strong>
                             </p>
                     </div>
                     <div style={styleOneMember} className="member-tarik">
@@ -56,8 +58,9 @@ const AboutPage = () => {
                             <cite> "Don’t cry because it’s over, smile because it happened." </cite>
                             <br />
                             <img className="members-image" src={Tarik} alt="Tarik" />
-                            HopZone Scrum Master |
-                            Tarik Selimović
+                            HopZone Scrum Master 
+                            <br />
+                            <strong>Tarik Selimović</strong>
                             </p>
                     </div>
                 </div>
