@@ -1,0 +1,37 @@
+﻿.about-page-main {
+    background: url('../../assets/images/defaultBackground.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scale(1.4);
+    min-height: 100vh;
+}
+
+.about-page-content {
+    position: absolute;
+    width: 50vw;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ec4c4c;
+    padding: 30px;
+    border-radius: 12% 0 10% 0;
+}
+
+.about-page-text {
+    border-top: 3px solid #f1eeee;
+    border-radius: 5px;
+    padding-top: 15px;
+    margin-top: 20px;
+    color: #f1eeee;
+    text-align: center;
+}
+
+.members-image {
+    display: block;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    border: 3px solid #64C6C5;
+    margin-bottom: 15px;
+}
