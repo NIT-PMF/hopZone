@@ -31,15 +31,16 @@
     top: 20%;
     right: 18%;
     z-index: 2;
-    height: 50vh;
+    height: 60vh;
 }
 
 .map-pin-image {
     position: absolute;
-    top: 60%;
-    right: 27%;
+    top: 55%;
+    right: 22%;
     z-index: 3;
-    height: 20vh;
+    height: 30vh; 
+    transform: rotate(25deg);
 }
 
 .header-main {
