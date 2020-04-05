@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 
-const SingInForm = () => {
+const LoginForm = () => {
 
     return (
         <div className="FormCenter">
@@ -16,11 +16,11 @@ const SingInForm = () => {
                 </div>
 
                 <div className="FormField">
-                    <button className="FormField__Button mr-20">Sign In</button>
+                    <button className="FormField__Button mr-20"> Login </button>
                 </div>
             </form>
         </div>
     )   
 }
 
-export default SingInForm;
+export default LoginForm;

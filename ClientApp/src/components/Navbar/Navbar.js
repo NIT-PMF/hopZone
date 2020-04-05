@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className="navigation-component">
             <ol className="nav-list">
                 <li className="nav-item-logo">
-                    <Link to="/"><Logo width={'25%'} /> </Link>
+                    <Link to="/"><Logo width={'20%'} /> </Link>
                 </li>
                 <LinkNavbar path="/">Home</LinkNavbar>
                 <LinkNavbar path="/about">About</LinkNavbar>
