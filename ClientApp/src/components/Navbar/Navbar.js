@@ -11,10 +11,10 @@ const Navbar = () => {
                 <li className="nav-item-logo">
                     <Logo width={'15%'} />
                 </li>
-                <LinkNavbar>Home</LinkNavbar>
-                <LinkNavbar>About</LinkNavbar>
-                <LinkNavbar>Destinations</LinkNavbar>
-                <LinkNavbar>Contact</LinkNavbar>
+                <LinkNavbar path="/">Home</LinkNavbar>
+                <LinkNavbar path="/about">About</LinkNavbar>
+                <LinkNavbar path="/destinations">Destinations</LinkNavbar>
+                <LinkNavbar path="/contact">Contact</LinkNavbar>
                 <li className="nav-item nav-primary">Learn More</li>
                 </ol>
         </div>

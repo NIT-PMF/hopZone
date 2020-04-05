@@ -5,7 +5,7 @@ import './index.css';
 const LinkNavbar = (props) => {
     return (
         <li className="nav-item">
-            <a href="#" className="link-navigation">{ props.children }</a>
+            <a href={props.path} className="link-navigation">{props.children}</a>
         </li>
         )
 }
