@@ -6,6 +6,8 @@ import CircleComponent from '../CircleComponent/CircleComponent';
 import phoneLogo from '../../assets/images/phoneLogo.svg';
 import mapPin from '../../assets/images/map-pin-image.svg';
 import bubblesArray from '../../assets/javascript/bubbles';
+import { Link } from 'react-router-dom';
+
 
 const HomepageHeader = () => {
     return (
@@ -31,8 +33,8 @@ const HomepageHeader = () => {
                             </Col>
                             <Col>
                                 <div className="main-header-buttons">
-                                    <ButtonPrimary> Sign Up </ButtonPrimary>
-                                    <ButtonPrimary> Login </ButtonPrimary>
+                                    <Link to='/sing'><ButtonPrimary> Sign Up </ButtonPrimary></Link>
+                                    <Link to='/sing/sing-in'><ButtonPrimary> Sign In </ButtonPrimary></Link>
                                 </div>
                             </Col>
                         </Col>
