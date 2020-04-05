@@ -10,7 +10,6 @@ const AboutPage = () => {
         display: 'flex',
         alignItems: 'flex - start',
         flex: '1 1 100 %',
-        flexDirection: 'row'
     }
     const styleOneMember = {
         flex: '1',
@@ -32,7 +31,7 @@ const AboutPage = () => {
                     This combination makes it a strong team who will always collaborate to find quick and efficient methods to achieve great results </p>
                 <br />
                 <Header1 size="1.5rem" color="white"> We Are: </Header1>
-                <div style={styleMembers}>
+                <div style={styleMembers} className="members-direction">
                     <div style={styleOneMember} className="member-naser">
                         <p className="about-page-text member-text member-naser">
                             <cite> "It is our choices, Harry, that show what we truly are, far more than our abilities." </cite>
@@ -63,8 +62,10 @@ const AboutPage = () => {
                             <strong>Tarik Selimović</strong>
                             </p>
                     </div>
+                    </div>
                 </div>
-            </div>
+                
+                <div className="footer"> </div>
         </div>
     )
 }
