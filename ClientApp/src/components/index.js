@@ -2,4 +2,4 @@
 export { default as Homepage } from './Homepage/Homepage';
 export { default as AboutPage } from './AboutPage/AboutPage';
 export { default as Footer } from './Footer/Footer';
-export { default as Sing } from './Sing/Sing';
+export { default as Account } from './Account/Account';

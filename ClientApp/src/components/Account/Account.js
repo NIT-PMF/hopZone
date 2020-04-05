@@ -14,18 +14,18 @@ const Sing = () => {
             <div className="App__Aside"></div>
                 <div className="App__Form">
                     <div className="PageSwitcher">
-                        <NavLink to="/sing/sing-in" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign In</NavLink>
-                        <NavLink exact to="/sing" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</NavLink>
+                        <NavLink to="/account/sign-in" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign In</NavLink>
+                        <NavLink exact to="/account" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</NavLink>
                     </div>
 
 
                     <div className="FormTitle">
-                        <NavLink to="/sing/sing-in" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> or <NavLink exact to="/sing" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign Up</NavLink>
+                        <NavLink to="/account/sign-in" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> or <NavLink exact to="/account" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign Up</NavLink>
                     </div>
 
-                    <Route  path="/sing" exact component={SignUpForm}>
+                    <Route  path="/account" exact component={SignUpForm}>
                     </Route>
-                    <Route path="/sing/sing-in" component={SignInForm}>
+                    <Route path="/account/sign-in" component={SignInForm}>
                     </Route>
                 </div>
             </div>

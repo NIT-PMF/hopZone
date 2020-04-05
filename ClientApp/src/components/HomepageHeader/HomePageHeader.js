@@ -33,8 +33,8 @@ const HomepageHeader = () => {
                             </Col>
                             <Col>
                                 <div className="main-header-buttons">
-                                    <Link to='/sing'><ButtonPrimary> Sign Up </ButtonPrimary></Link>
-                                    <Link to='/sing/sing-in'><ButtonPrimary> Sign In </ButtonPrimary></Link>
+                                    <Link to='/account'><ButtonPrimary> Sign Up </ButtonPrimary></Link>
+                                    <Link to='/account/sign-in'><ButtonPrimary> Sign In </ButtonPrimary></Link>
                                 </div>
                             </Col>
                         </Col>
