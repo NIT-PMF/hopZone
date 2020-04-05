@@ -1,11 +1,17 @@
-﻿.make-div-app {
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.make-div-app {
     position:absolute;
     top: 0;
     background-image: url('../../assets/images/defaultBackground.svg');
     background-repeat: repeat;
     background-size: cover;
     width: 100vw;
-    height: 200%;
+    min-height: 120%;
     z-index: -2;
 }
 
@@ -24,6 +30,16 @@
     background-color: #66DAC7;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.83);
     border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.App__Aside_Small {
+    margin-top: 10px;
+    font-size: 1.2rem;
 }
 
 .App__Form {
@@ -31,7 +47,7 @@
     background-color: #2E4158;
     padding: 25px 40px;
     overflow: auto;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.83);
+    box-shadow: 10px 10px 5px rgba(100,198,197,0.85);
     border-radius: 10%;
 }
 
@@ -87,13 +103,23 @@
     padding-bottom: 5px;
 }
 
-    .FormTitle__Link:first-child {
-        margin-left: 0;
-    }
+.FormTitle__Link:first-child {
+    margin-left: 0;
+}
 
 .FormTitle__Link--Active {
     color: white;
     border-bottom: 1px solid #199087;
+}
+
+.FormTitle__Link:hover, a:focus, a:hover {
+    color: #f1eeee;
+    text-decoration: none;
+}
+
+.FormTitle__Link:active, .FormTitle__Link:focus  {
+    color: #57C6DE;
+    text-decoration: none;
 }
 
 .FormField {
@@ -120,9 +146,9 @@
     margin-top: 10px;
 }
 
-    .FormField__Input::placeholder {
-        color: #616E7F;
-    }
+.FormField__Input::placeholder {
+    color: #616E7F;
+}
 
 .FormField__Button {
     background-color: #52C4B9;
@@ -130,18 +156,25 @@
     border: none;
     outline: none;
     border-radius: 25px;
-    padding: 15px 70px;
-    font-size: .8em;
+    padding: 10px 50px;
+    font-size: 1.2em;
     font-weight: 500;
+    text-transform: uppercase;
+    transition: ease-in-out .3s;
 }
 
-.FormField__Link {
-    color: #66707D;
-    text-decoration: none;
-    display: inline-block;
-    border-bottom: 1.5px solid #225E62;
-    padding-bottom: 5px;
-}
+    .FormField__Button:hover {
+        background: #f1eeee;
+        color: #000000;
+    }
+
+    .FormField__Link {
+        color: #66707D;
+        text-decoration: none;
+        display: inline-block;
+        border-bottom: 1.5px solid #225E62;
+        padding-bottom: 5px;
+    }
 
 .FormField__CheckboxLabel {
     color: #646F7D;

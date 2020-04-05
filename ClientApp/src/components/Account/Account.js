@@ -11,7 +11,12 @@ const Sing = () => {
         <div>
         <div className="make-div-app"></div>
         <div className="Apps">
-            <div className="App__Aside"></div>
+                <div className="App__Aside">Lets get you set up!
+                <span className="App__Aside_Small">
+                        It should only take a couple of minutes to create your account. <br/>
+                        You can add additional info about yourself in the profile page :)
+                        </span>
+                    </div>
                 <div className="App__Form">
                     <div className="PageSwitcher">
                         <NavLink to="/account/login" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Login</NavLink>
@@ -23,7 +28,7 @@ const Sing = () => {
                         <NavLink to="/account/login" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Login</NavLink> or <NavLink exact to="/account/signup" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign Up</NavLink>
                     </div>
 
-                    <Route  path="/account/signup" exact component={SignUpForm}>
+                    <Route path="/account/signup" exact component={SignUpForm}>
                     </Route>
                     <Route path="/account/login" component={LoginForm}>
                     </Route>
