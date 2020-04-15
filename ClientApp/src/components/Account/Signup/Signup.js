@@ -5,6 +5,8 @@ import '../index.css';
 
 const SignupForm = () => {
 
+    document.title = "HopZone | Create Account";
+
     return (
         <React.Fragment>
             <div className="App__Aside">Lets get you set up!

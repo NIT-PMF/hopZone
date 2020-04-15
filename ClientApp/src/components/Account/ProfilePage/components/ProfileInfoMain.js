@@ -24,7 +24,7 @@ const ProfileInfoMain = () => {
             </div>
             <div style={subheaderStyle}>
                 Solution Manager - Creative Officer
-                <span style={{ display: 'block', color: 'darkblue' }}>University of Colorado</span>
+                <span style={{ display: 'block', color: 'black' }}>University of Colorado</span>
             </div>
             <div>
                 I love Traveling!

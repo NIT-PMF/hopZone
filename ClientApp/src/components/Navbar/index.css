@@ -47,3 +47,14 @@ html, body {
 .nav-item-logo {
     flex: 2;
 }
+
+.link-learn-more {
+    text-transform: none;
+    text-decoration: none;
+    color: #fff;
+}
+
+.link-learn-more:hover {
+        color: #000000;
+
+}

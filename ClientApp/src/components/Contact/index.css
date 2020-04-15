@@ -1,0 +1,78 @@
+﻿body {
+    background-image: url('../../assets/images/defaultBackground.svg');
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.contact-page-container {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translate(50%,10%);
+    width: 100vw;
+}
+
+.contact-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.company-logo-image {
+    width: 250px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+}
+
+label {
+    padding: 5px 5px 0 5px;
+    font-size: 1.3rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    outline: none;
+    background-color: #97e5ef;
+    color: #202040;
+    font-size: 1.2rem;
+}
+
+textarea {
+    overflow-y: scroll;
+    resize: none;
+}
+
+.form-submit {
+    margin: 2px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #0779e4;
+    color: #eff3c6;
+    font-size: 1.3rem;
+    border-radius: 12px;
+    transition: .2s ease all;
+}
+
+
+.form-submit:hover {
+    background-color: #1b262c;
+    color: #f1eeee;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 700px) {
+    .contact-info, .contact-form {
+        width: 100%;
+    }
+}

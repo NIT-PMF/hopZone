@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import '../index.css';
 
 const LoginForm = () => {
+    document.title = "HopZone | Login";
 
     return (
         <React.Fragment>
@@ -18,9 +19,11 @@ const LoginForm = () => {
                     <NavLink exact to="/account/signup" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</NavLink>
                 </div>
 
+                {/*
                 <div className="FormTitle">
                     <NavLink to="/account/login" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Login</NavLink> or <NavLink exact to="/account/signup" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign Up</NavLink>
-                </div>
+               </div>
+                */}
                 <div className="FormCenter">
                     <form className="FormFields">
                         <div className="FormField">

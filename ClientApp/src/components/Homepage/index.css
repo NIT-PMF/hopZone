@@ -16,6 +16,7 @@
 .main-content {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 .card-features {
@@ -34,14 +35,44 @@
     margin: 30px 20px 50px;
 }
 
-.text-main-2 {
-    color: #f1eeee;
-    font-size: 1.5rem;
-    padding: 20px;
-    width: 80%;
-    transform: translateX(20%);
+.card-info-content {
+    padding: 10vh;
+    margin-right: 5rem;
 }
 
+.text-main-2 {
+    color: #f1eeee;
+    font-size: 1.3rem;
+    padding: 0 20px 0 20px;
+    width: 60%;
+    transform: translate(40%, 10%);
+    text-align: justify;
+}
+
+.text-decor {
+    position: absolute;
+    color: #f1eeee;
+    font-size: 1.3rem;
+    padding: 0 20px 0 20px;
+    width: 60%;
+    transform: translateY(10%);
+    text-align: justify;
+}
+
+.feature-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.feature-content {
+    margin-left: 2rem;
+}
+
+.feature-text {
+    text-align: justify;
+}
 
 .footer-homepage {
     margin-top: 35vh;
@@ -55,6 +86,34 @@
     width: 100%;
 }
 
+@media screen and (max-width: 1200px) {
+
+    .feature-text {
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .feature-container {
+        height: 200px;
+    }
+
+    .text-main-2 {
+        font-size: 1rem;
+        padding: 0;
+    }
+    .main-content {
+        min-height: 200vh;
+    }
+
+    .card-add-info, .card-features {
+        display: block;
+        width: 100%;
+        flex: 1;
+    }
+}
+
 @media screen and (max-width: 720px) {
 
     .card-features {
@@ -63,5 +122,9 @@
 
     .card-add-info {
         transform: rotate(0);
+    }
+
+    .text-main-2 {
+        font-size: .8rem;
     }
 }

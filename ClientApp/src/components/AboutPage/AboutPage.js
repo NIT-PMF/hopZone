@@ -5,6 +5,8 @@ import './index.css';
 
 const AboutPage = () => {
 
+    document.title = "HopZone | About NIT";
+
     const styleMembers = {
         position: 'relative',
         display: 'flex',
@@ -21,7 +23,7 @@ const AboutPage = () => {
             <div className="about-page-content">
                 <Header1 size="2rem" color="white"> About Us </Header1>
 
-                <p className="about-page-text">
+                <p className="about-page-text general-info-text">
                     Our mission at NIT is creating a unique way to easily travel with innovation, originality and creativity.
                     NIT brings innovation and originality to everyone by creating a unique way to easily travel.
                     NIT is dedicated to the highest quality of user-friendly traveling application delivered with ingenuity, innovation and originality

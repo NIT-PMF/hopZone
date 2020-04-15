@@ -5,7 +5,6 @@ import SignUpForm from './Signup/Signup';
 import LoginForm from './Login/Login';
 import ProfilePage from './ProfilePage/ProfilePage';
 
-
 const AccountPage = () => {
 
     return (

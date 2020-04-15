@@ -8,6 +8,9 @@ import ProfileInfoMain from './components/ProfileInfoMain';
 import ProfileMain from './components/ProfileMain';
 
 const ProfilePage = () => {
+
+    document.title = "HopZone | Profile Page";
+
     return (
         <div className="profile-page-container">
             <ProfileImage />
