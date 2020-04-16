@@ -27,7 +27,7 @@ const Homepage = () => {
                             <div className="card-features" >
                                 <CardPrimary left={'0'} top={'-15vh'} shape={true} width={'60%'} height={'1000px'}>
                                     <a id="learn-more-content"></a>
-                                    <p className="text-main-2">
+                                    <div className="text-main-2">
                                         <div className="feature-container">
                                             <FaHandsHelping size="15rem" />
                                             <div className="feature-content">
@@ -64,7 +64,7 @@ const Homepage = () => {
                                             </div>
                                         </div>
 
-                                    </p>
+                                    </div>
                                 </CardPrimary>
                             </div>
                             <div className="card-add-info">

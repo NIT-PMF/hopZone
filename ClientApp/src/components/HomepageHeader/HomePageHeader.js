@@ -21,8 +21,8 @@ const HomepageHeader = () => {
                 <div className="header-main">
                     <Row noGutters>
                         <Col>
-                            <span classname="circles">
-                                {bubblesArray.map(circle => <CircleComponent radius={circle.radius} top={circle.top} left={circle.left} />)}
+                            <span>
+                                {bubblesArray.map((circle, index) => <CircleComponent key={index} radius={circle.radius} top={circle.top} left={circle.left} />)}
                             </span>
                             <Col sm={{ size: 'auto' }}>
                                 <h1 className="main-header-text">
