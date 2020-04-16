@@ -4,8 +4,18 @@ body {
     font-family: Roboto, sans-serif;
 }
 
+.login-container, .signup-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.signup-container {
+    margin-bottom: 20px;
+}
+
 .make-div-app {
-    position:absolute;
+    position: absolute;
     top: 0;
     background-image: url('../../assets/images/defaultBackground.svg');
     background-repeat: repeat;
@@ -19,10 +29,9 @@ body {
 .Apps {
     display: flex;
     color: white;
-    margin-left:10%;
-    margin-right:10%;
-   margin-top: 5%;  
-  
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
 }
 
 .App__Aside {
@@ -40,6 +49,8 @@ body {
 .App__Aside_Small {
     margin-top: 10px;
     font-size: 1.2rem;
+    text-align: center;
+    width: 90%;
 }
 
 .App__Form {
@@ -103,9 +114,9 @@ body {
     padding-bottom: 5px;
 }
 
-.FormTitle__Link:first-child {
-    margin-left: 0;
-}
+    .FormTitle__Link:first-child {
+        margin-left: 0;
+    }
 
 .FormTitle__Link--Active {
     color: white;
@@ -117,13 +128,22 @@ body {
     text-decoration: none;
 }
 
-.FormTitle__Link:active, .FormTitle__Link:focus  {
+.FormTitle__Link:active, .FormTitle__Link:focus {
     color: #57C6DE;
     text-decoration: none;
 }
 
 .FormField {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+.Field_first_last_name {
+    display: flex;
+    width: 93%;
+}
+
+.Form_Name {
+    flex: auto;
 }
 
 .FormField__Label {
@@ -146,9 +166,9 @@ body {
     margin-top: 10px;
 }
 
-.FormField__Input::placeholder {
-    color: #616E7F;
-}
+    .FormField__Input::placeholder {
+        color: #616E7F;
+    }
 
 .FormField__Button {
     background-color: #52C4B9;
@@ -168,22 +188,30 @@ body {
         color: #000000;
     }
 
-    .FormField__Link {
-        color: #66707D;
-        text-decoration: none;
-        display: inline-block;
-        border-bottom: 1.5px solid #225E62;
-        padding-bottom: 5px;
-    }
+.FormField__Link {
+    color: #66707D;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1.5px solid #225E62;
+    padding-bottom: 5px;
+}
 
 .FormField__CheckboxLabel {
     color: #646F7D;
     font-size: .9em;
+    display: flex;
+    align-items: center;
+}
+
+.confirm-checkbox {
+    flex: 1;
 }
 
 .FormField__Checkbox {
     position: relative;
-    top: 1.5px;
+    flex: .1;
+    margin: 0 !important;
+    width: 100%;
 }
 
 .FormField__TermsLink {
@@ -195,3 +223,38 @@ body {
     margin-left: 5px;
 }
 
+@media screen and (max-width: 1280px) {
+    .login-container, .signup-container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .Apps {
+        margin: 10vh 0 0 0;
+    }
+
+    .App__Aside, .App__Form {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 720px) {
+    .login-container, .signup-container {
+        flex-direction: column;
+    }
+
+    .signup-container {
+        margin-bottom: 10px;
+    }
+
+    .App__Aside {
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .App__Aside, .App__Form {
+        width: 100%;
+        border-radius: 0;
+    }
+}
