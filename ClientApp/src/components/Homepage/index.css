@@ -1,6 +1,7 @@
-﻿body {
+body {
     background-color: #f1eeee;
-    min-height: 100vh;
+    min-height: 100vh !important;
+    box-sizing: border-box;
 }
 
 .homepage-main {
@@ -47,6 +48,7 @@
     width: 60%;
     transform: translate(40%, 10%);
     text-align: justify;
+    box-sizing: border-box;
 }
 
 .text-decor {

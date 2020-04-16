@@ -1,5 +1,5 @@
-﻿import './index.css';
-import React, { useState } from 'react';
+import './index.css';
+import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
 import CircleComponent from '../CircleComponent/CircleComponent';
@@ -7,7 +7,6 @@ import phoneLogo from '../../assets/images/phoneLogo.svg';
 import mapPin from '../../assets/images/map-pin-image.svg';
 import bubblesArray from '../../assets/javascript/bubbles';
 import { Link } from 'react-router-dom';
-
 
 const HomepageHeader = () => {
     return (
