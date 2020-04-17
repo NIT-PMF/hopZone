@@ -1,4 +1,4 @@
-﻿﻿body {
+﻿body {
     overflow-x: hidden;
     min-height: 100vh;
 }
@@ -95,3 +95,14 @@
 }
 
 
+@media screen and (max-width: 1024px) {
+    .background-image {
+        top: -70px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+  .background-image {
+    top: -250px;
+  }
+}

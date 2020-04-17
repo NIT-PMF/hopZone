@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../../scss/style.scss';
+
 
 const propTypes = {
   children: PropTypes.node,

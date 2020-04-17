@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
   font-family: Roboto, sans-serif;
@@ -37,8 +37,8 @@ body {
 
 .App__Aside {
   width: 35%;
-  background-color: #66DAC7;
-  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.83);
+  background-color: #ec4c4c;
+  box-shadow: 10px 10px 5px rgba(46, 65, 88, 0.83);
   border-radius: 10%;
   display: flex;
   justify-content: center;
@@ -60,7 +60,7 @@ body {
   background-color: #2E4158;
   padding: 25px 40px;
   overflow: auto;
-  box-shadow: 10px 10px 5px rgba(100,198,197,0.85);
+  box-shadow: 10px 10px 5px rgba(62, 112, 235, 0.83);
   border-radius: 10%;
 }
 
@@ -83,7 +83,7 @@ body {
 }
 
 .PageSwitcher__Item--Active {
-  background-color: #5ED0C0;
+  background-color: #ec4c4c;
   color: white;
 }
 
@@ -168,12 +168,9 @@ body {
   margin-top: 10px;
 }
 
-  .FormField__Input::placeholder {
-    color: #616E7F;
-  }
 
 .FormField__Button {
-  background-color: #52C4B9;
+  background-color: #ec4c4c;
   color: white;
   border: none;
   outline: none;
@@ -183,6 +180,7 @@ body {
   font-weight: 500;
   text-transform: uppercase;
   transition: ease-in-out .3s;
+  cursor: pointer;
 }
 
   .FormField__Button:hover {
@@ -214,16 +212,46 @@ body {
   flex: .1;
   margin: 0 !important;
   width: 100%;
+  cursor: pointer;
 }
 
-.FormField__TermsLink {
+.FormField__Input:focus {
+  background-color: #4a617d;
+}
+​
+
+a .FormField__TermsLink {
   color: white;
-  border-bottom: 1px solid #199087;
+  border-bottom: 1px solid #ec4c4c;
   text-decoration: none;
   display: inline-block;
   padding-bottom: 2px;
   margin-left: 5px;
+  cursor: pointer;
 }
+
+.styleModal {
+  position: fixed;
+  top: 20%;
+  right: 50%;
+  transform: translate(50%, 10px);
+  background-color: white;
+  width: 500px;
+  height: 500px;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+  .styleModal .close {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+    color: black;
+    font-weight: bold;
+    font-size: 2.4rem;
+    cursor: pointer;
+  }
 
 @media screen and (max-width: 1280px) {
   .login-container, .signup-container {
@@ -238,7 +266,6 @@ body {
   .App__Aside, .App__Form {
     width: 100%;
   }
-
 }
 
 @media screen and (max-width: 720px) {
@@ -259,4 +286,16 @@ body {
     width: 100%;
     border-radius: 0;
   }
+
+  .styleModal {
+    width: 90%;
+  }
+}
+
+.FormField__Input:focus::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+.FormField__Input:focus:-moz-placeholder {
+  color: #ccc;
 }

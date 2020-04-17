@@ -1,4 +1,4 @@
-﻿.card-primary-design {
+.card-primary-design {
     position: absolute;
     display: inline-block;
     z-index: 3;
@@ -16,6 +16,10 @@
     right: 5vw;
     padding: 20px;
     text-align: center;
+}
+
+@media screen and (max-width: 1320px) {
+
 }
 
 @media screen and (max-width: 720px) {

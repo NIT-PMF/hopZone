@@ -1,21 +1,22 @@
-﻿.contact-page {
+.contact-page {
     position: relative;
 }
 
 .contact-card {
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row-reverse;
-    right: 50%;
-    align-items: center;
-    transform: translate(50%,30%);
-    width: 60vw;
-    height: 70vh;
-    background-color: #f1eeee;
-    border-radius: 20px;
-    padding: 20px;
-    z-index: 2;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  right: 50%;
+  align-items: center;
+  transform: translate(50%,30%);
+  width: 60vw;
+  height: 70vh;
+  background-color: #f1eeee;
+  box-shadow: 2px 1px 1px 2px #ec4c4c;
+  border-radius: 20px;
+  padding: 20px;
+  z-index: 2;
 }
 
 .contact-logo {

@@ -3,6 +3,8 @@ import { Nav, NavItem, NavLink, Progress, TabContent, TabPane, ListGroup, ListGr
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { AppSwitch } from '@coreui/react'
+import '../../scss/style.scss';
+import './style.css';
 
 const propTypes = {
   children: PropTypes.node,

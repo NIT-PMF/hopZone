@@ -88,8 +88,20 @@ body {
     width: 100%;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1700px) {
+  .card-info-content {
+    transform: translateX(7%);
+  }
+  .feature-content {
+    transform: translateX(-4%);
+  }
 
+    .text-decor {
+        transform: translateX(10%);
+    }
+}
+
+@media screen and (max-width: 1200px) {
     .feature-text {
         font-size: 1rem;
     }

@@ -1,0 +1,4 @@
+.nav-link.active, li.nav-item {
+    border-radius: initial;
+    background-color: transparent !important;
+}
