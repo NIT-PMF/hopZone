@@ -1,0 +1,328 @@
+.map{
+    z-index:-1;
+}
+
+
+.overlay-nav {  
+    position: absolute;
+    top: 10%;
+    right: 0;
+    bottom: 0;
+    height:10vh;
+    margin:2%;
+}
+
+.overlay-form {
+    position: absolute;
+    top: 43px;
+    right: 20px;
+    left: 20px;
+    bottom: 20px;
+    width: 30vw;
+    margin:3%;
+}
+
+
+.overlay-form-route {
+    position: absolute;
+    top: 43px;
+    right: 20px;
+    left: 20px;
+    bottom: 20px;
+    width: 40vw;
+    margin: 3%;
+}
+    
+.PageSwitcher-map {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.PageSwitcher__Item-map {
+    background-color: #4C5D72;
+    color: #9DA6B1;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: .9em;
+    border: none;
+    outline: none;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.PageSwitcher__Item-map--Active{
+    background-color: #5ED0C0;
+    color: white;
+}
+
+.PageSwitcher__Item-map:first-child {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.PageSwitcher__Item-map:last-child {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+
+
+.FormCenter-map {
+    display:inherit;
+    background-color: rgba(11, 29, 58, 0.80);
+    border-radius: 10%;
+    
+}
+
+.FormTitle-map {
+    color: #707C8B;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.FormTitle__Link-map {
+    color: #707C8B;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.7em;
+    margin: 0 10px;
+    padding-bottom: 5px;
+}
+
+    .FormTitle__Link-map:first-child {
+        margin-left: 0;
+    }
+
+.FormTitle__Link-map--Active {
+    color: white;
+    border-bottom: 1px solid #199087;
+}
+
+.FormTitle__Link-map:hover, a:focus, a:hover {
+    color: #f1eeee;
+    text-decoration: none;
+}
+
+.FormTitle__Linkmap-:active, .FormTitle__Link-map:focus {
+    color: #57C6DE;
+    text-decoration: none;
+}
+
+.FormField-map {
+    padding-bottom: 40px;
+    margin:3%;
+}
+
+.FormField__Label-map {
+    display: block;
+    text-transform: uppercase;
+    font-size: .9em;
+    color: white;
+    
+}
+
+.FormField-map-lnglat {
+    padding-bottom: 40px;
+   
+    color: white;
+}
+
+.FormField__Label-lnglat {
+    
+    text-transform: uppercase;
+    font-size: .9em;
+    color: white;
+}
+
+.FormField__Input-map-lnglat {
+    
+    color: black;
+    outline: none;
+    border-bottom: 1px solid #83a5d2;
+    font-size: 1em;
+    margin-left:10px;
+    margin-top: 10px;
+}
+
+
+.FormField__Input-map {
+    width: 85%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    border-bottom: 1px solid #445366;
+    font-size: 1em;
+    font-weight: 300;
+    padding-bottom: 5px;
+    margin-top: 10px;
+}
+
+    .FormField__Input-map::placeholder {
+        color: #616E7F;
+    }
+
+.FormField__Button-map {
+    background-color: #52C4B9;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 10px 40px;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: ease-in-out .3s;
+}
+
+    .FormField__Button-map:hover {
+        background: #f1eeee;
+        color: #000000;
+    }
+
+.FormField__Link-map {
+    color: #66707D;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1.5px solid #225E62;
+    padding-bottom: 5px;
+}
+
+.FormField__CheckboxLabel-map {
+    color: #646F7D;
+    font-size: .9em;
+}
+
+.FormField__Checkbox-map {
+    position: relative;
+    top: 1.5px;
+}
+
+.FormField__TermsLink-map {
+    color: white;
+    border-bottom: 1px solid #199087;
+    text-decoration: none;
+    display: inline-block;
+    padding-bottom: 2px;
+    margin-left: 5px;
+}
+
+.FormFields-map{
+    margin:5%;
+}
+
+.FormFildes-component-row-direction {
+    display: flex;
+    felx-direction: row;
+}
+
+.mapboxgl-ctrl-geocoder--input {
+    font: inherit;
+    width: 100%;
+    border: 0;
+    background-color: transparent;
+    margin: 0;
+    height: 50px;
+    color: #404040;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 6px 45px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+
+
+.react-geocoder {
+  position: absolute;
+  margin: auto;
+  top: 4px;
+  left: 0;
+  right: 50%;
+  bottom: 85%;
+  width: 20vw;
+  z-index: 101;
+}
+
+  .react-geocoder input {
+    width: 20vw;
+    height: 1vh;
+    border: none;
+    outline: none;
+    border-radius: 10rem;
+    padding: 2rem;
+    transition: all .1s;
+    transition-delay: .1s;
+    box-shadow: rgba(0, 0, 0, 0.35) 4px 4px inset;
+    z-index: 101;
+  }
+
+.react-geocoder-results {
+  background-color: #fff;
+  color: #000;
+  font-size: 12px; /* according to your requirement */
+  font-family: arial;
+  font-weight: normal;
+  padding: 0 10px;
+  margin: 0px;
+  line-height: 30px; /* according to your requirement */
+  display: block;
+  border-radius: 2%;
+  z-index: 101;
+}
+
+.react-geocoder-item:hover {
+    border-bottom: 1px solid black;
+}
+
+.react-geocoder-item{
+    cursor:pointer;
+}   
+
+.FormFildes-lnglat{
+    display:flex;
+    flex-direction:row;
+}
+
+.component-route{
+    color:whitesmoke;
+}
+
+.FormField__Button-map-delete{
+    background-color: #cd5252;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 10px 50px;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: ease-in-out .3s;
+    
+}
+
+.FormField__Button-map-delete:hover {
+    background: #f1eeee;
+    color: #000000;
+}
+
+.FormField__Button-map-submit {
+    background-color: #70cd52;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    margin:2%;
+    padding: 10px 50px;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: ease-in-out .3s;
+}
+
+    .FormField__Button-map-submit:hover {
+        background: #f1eeee;
+        color: #000000;
+    }

@@ -1,4 +1,4 @@
-﻿body {
+body {
     background-image: url('../../assets/images/defaultBackground.svg');
     background-repeat: repeat;
     background-size: cover;
@@ -36,15 +36,15 @@ label {
     font-size: 1.3rem;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: none;
-    outline: none;
-    background-color: #97e5ef;
-    color: #202040;
-    font-size: 1.2rem;
+.contact__form_input_textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  outline: none;
+  background-color: #97e5ef;
+  color: #202040;
+  font-size: 1.2rem;
 }
 
 textarea {

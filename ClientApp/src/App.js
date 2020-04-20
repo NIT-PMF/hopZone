@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Navbar, Homepage, AboutPage, Contact, Account } from './components';
+import { Navbar, Homepage, AboutPage, Contact, Account, Mappage} from './components';
 // import { renderRoutes } from 'react-router-config';
 //import './App.scss';
 import './App.css';
@@ -30,6 +30,7 @@ const App = () => {
             <Route path="/about" component={AboutPage} />
             <Route path="/account" component={Account} />
             <Route path="/contact" exact component={Contact}></Route>
+            <Route path="/mappage"  component={Mappage}></Route>
             <Route exact path="/admin/login" name="Login Page" render={props => <Login {...props} />} />
             <Route exact path="/admin/register" name="Register Page" render={props => <Register {...props} />} />
             <Route exact path="/404" name="Page 404" render={props => <Page404 {...props} />} />

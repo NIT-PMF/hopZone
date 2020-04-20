@@ -27,7 +27,7 @@ class Tabs extends Component {
 
   tabPane() {
     return (
-      <>
+      <div>
         <TabPane tabId="1">
           {`1. ${this.lorem()}`}
         </TabPane>
@@ -37,7 +37,7 @@ class Tabs extends Component {
         <TabPane tabId="3">
           {`3. ${this.lorem()}`}
         </TabPane>
-      </>
+      </div>
     );
   }
 
