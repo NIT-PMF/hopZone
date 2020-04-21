@@ -76,3 +76,9 @@ textarea {
         width: 100%;
     }
 }
+
+@media screen and (max-width: 1000px) {
+  .contact-form input, .contact-form textarea {
+    width: 80%;
+  }
+}

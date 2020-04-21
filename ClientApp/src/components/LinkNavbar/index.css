@@ -1,4 +1,4 @@
-﻿li.nav-item {
+li.nav-item {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     letter-spacing: .1rem;
@@ -29,7 +29,5 @@ li.nav-item:hover a {
 
 
 @media screen and (max-width: 720px) {
-    li.nav-item {
-        display: none;
-    }
+    
 }

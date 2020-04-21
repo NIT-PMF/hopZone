@@ -32,6 +32,11 @@ const MyInput = (props) => <input {...props} placeholder="Search city here" />
 
 export default function MapPage() {
 
+  const markerStyle = {
+    transform: 'translate(-50%, -100%)',
+    width: '30px'
+  }
+
     const [viewport, setViewport] = useState({
         latitude: 43.8563,
         longitude: 18.4131,
@@ -54,10 +59,10 @@ export default function MapPage() {
         'geometry': {
             'type': 'LineString',
             'coordinates': [
-                [18.478331323240063 + 0.007, 43.89292808086501 - 0.006],
-                [18.595747705076015 + 0.007, 43.945356108950406 - 0.006],
-                [18.39730715331789 + 0.007, 43.98637599443554 - 0.006],
-                [18.269591088864743 + 0.007, 43.98637599443554 -0.006]
+                [18.478331323240063, 43.89292808086501],
+                [18.595747705076015, 43.945356108950406],
+                [18.39730715331789, 43.98637599443554],
+                [18.269591088864743, 43.98637599443554]
             ]
         }
     }
@@ -154,14 +159,14 @@ export default function MapPage() {
                 {oldMarkers.map(m => (
                     <Marker key={m.key} latitude={m.langitude} longitude={m.latitude}>
 
-                        <input type="image" src={marker_blue}  width="20px" />
+                    <input type="image" src={marker_blue} style={markerStyle} />
                     </Marker>
                 ))}
 
                 {markers.map(m => (
                     <Marker key={m.key} latitude={m.longitude} longitude={m.latitude}>
 
-                        <input type="image" src={marker_red}  width="20px" />
+                    <input type="image" src={marker_red} style={markerStyle} />
                     </Marker>
                 ))}
 
@@ -169,7 +174,7 @@ export default function MapPage() {
                 {routeMarkers.map(m => (
                     <Marker key={m.key} latitude={m.longitude} longitude={m.latitude}>
 
-                        <input type="image" src={marker_red}  width="20px" />
+                    <input type="image" src={marker_red} style={markerStyle} />
                     </Marker>
                 ))}
 
@@ -177,7 +182,7 @@ export default function MapPage() {
                 {oldRoutMarkers.map(m => (
                     <Marker key={m.key} latitude={m.longitude} longitude={m.latitude}>
 
-                        <input type="image" src={marker_red}  width="20px" />
+                    <input type="image" src={marker_red} style={markerStyle} />
                     </Marker>
                 ))}
             

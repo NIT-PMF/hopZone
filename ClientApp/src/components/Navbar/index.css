@@ -23,13 +23,13 @@ html, body {
 }
 
 .nav-item {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    color: #f1eeee;
-    letter-spacing: .1rem;
-    
-    padding: 10px 20px;
-    margin: 0 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #f1eeee;
+  letter-spacing: .1rem;
+  padding: 10px 20px;
+  margin: 0 10px;
+
 }
 
     .nav-item:hover {
@@ -46,6 +46,7 @@ html, body {
 
 .nav-item-logo {
     flex: 2;
+    text-align: start;
 }
 
 .link-learn-more {
@@ -58,3 +59,58 @@ html, body {
         color: #000000;
 
 }
+
+
+.large-menu-class {
+    width: 100%;
+}
+
+@media screen and (max-width: 1500px) {
+  .nav-item-logo img {
+      width: 200px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-item-logo img {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .nav-item-logo img {
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .nav-item-logo img {
+    display: none;
+  }
+}
+
+
+  @media screen and (max-width: 740px) {
+    .nav-item-logo img {
+      width: 150px;
+    }
+
+    .nav-item-logo img {
+      display: block;
+    }
+
+    .nav-list {
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      right: 50%;
+      transform: translateX(50%);
+      width: 400px;
+      background-color: #3860ED;
+    }
+
+
+    .nav-item {
+      margin: 10px !important;
+    }
+  }
