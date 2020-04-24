@@ -1,6 +1,5 @@
 ﻿using HopZoneV2.Models;
 using HopZoneV2.Settings;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using System;
@@ -19,9 +18,9 @@ namespace HopZoneV2.Entitites.Context
         {
             try
             {
-                var client = new MongoClient(settings.Value.ConnectionString);
+                var client = new MongoClient("mongodb+srv://NIT:12345nit@cluster0-vd97p.mongodb.net/test?retryWrites=true&w=majority");
 
-                _database = client.GetDatabase(settings.Value.Database);
+                _database = client.GetDatabase("hopzone");
 
             }
             catch (System.Exception ex)
