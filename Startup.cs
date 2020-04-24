@@ -1,3 +1,4 @@
+using GraphiQl;
 using GraphQL;
 using GraphQL.Server;
 using GraphQL.Server.Ui.Playground;
@@ -78,7 +79,7 @@ namespace HopZoneV2
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
-            app.UseGraphQL<AppSchema>();
+            app.UseGraphiQl();
             app.UseGraphQLPlayground(options: new GraphQLPlaygroundOptions());
 
 

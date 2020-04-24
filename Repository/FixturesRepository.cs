@@ -77,45 +77,5 @@ namespace HopZoneV2.Repository
                 throw ex;
             }
         }
-
-        Task<IEnumerable<Fixture>> ITeamsCollectionRepository<Fixture>.GetItemsByTeamsAsync(string team2, string team1)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        Task<IEnumerable<Fixture>> ICollectionRepository<Fixture>.GetItemsAsync(string paramName, object paramValue)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        Task<IEnumerable<Fixture>> ICollectionRepository<Fixture>.GetItemsAsync()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        Task<Fixture> ICollectionRepository<Fixture>.GetItemAsync(string paramName, object paramValue)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        Task<IEnumerable<Fixture>> ITeamsCollectionRepository<Fixture>.GetItemsByTeamsAsync(string team2, string team1)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        Task<IEnumerable<Fixture>> ICollectionRepository<Fixture>.GetItemsAsync(string paramName, object paramValue)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        Task<IEnumerable<Fixture>> ICollectionRepository<Fixture>.GetItemsAsync()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        Task<Fixture> ICollectionRepository<Fixture>.GetItemAsync(string paramName, object paramValue)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

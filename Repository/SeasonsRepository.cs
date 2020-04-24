@@ -1,10 +1,11 @@
-﻿using HopZoneV2.Models;
+﻿using HopZoneV2.Entitites.Context;
+using HopZoneV2.Models;
 using HopZoneV2.Settings;
 using Microsoft.Extensions.Options;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using static Microsoft.AspNetCore.Hosting.Internal.HostingApplication;
 
 namespace HopZoneV2.Repository
 {

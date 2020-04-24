@@ -1,7 +1,9 @@
 ﻿
+using System.Linq;
 using GraphQL.Types;
 using HopZoneV2.Models;
 using HopZoneV2.Repository;
+using HopZoneV2.Settings;
 
 namespace HopZoneV2.Queries
 {
@@ -165,8 +167,5 @@ namespace HopZoneV2.Queries
                     .Result
             );
         }
-
-        public object FixturesComputation { get; }
-        public object PredictionTune { get; }
     }
 }

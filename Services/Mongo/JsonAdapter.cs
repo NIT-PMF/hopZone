@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using HopZoneV2.Models;
 using MongoDB.Bson;
 using Newtonsoft.Json;
 
