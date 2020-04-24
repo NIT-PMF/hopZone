@@ -1,9 +1,19 @@
+using GraphQL;
+using GraphQL.Server;
+using GraphQL.Server.Ui.Playground;
+using GraphQL.Types;
+using HopZoneV2.Models;
+using HopZoneV2.Queries;
+using HopZoneV2.Repository;
+using HopZoneV2.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
 
 namespace HopZoneV2
 {
@@ -19,7 +29,31 @@ namespace HopZoneV2
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc();
+
+            services.Configure<MongoSettings>(options => {
+                options.ConnectionString
+                    = Configuration.GetSection("mongodb+srv://NIT:12345nit@cluster0-vd97p.mongodb.net/test?retryWrites=true&w=majority").Value;
+                options.Database
+                    = Configuration.GetSection("hopzone").Value;
+            });
+
+            services.AddScoped<NTPQuery>();
+            services.AddScoped<IDocumentExecuter, DocumentExecuter>();
+
+            services.AddTransient<ITeamsCollectionRepository<Fixture>, FixturesRepository>();
+            services.AddTransient<ICollectionRepository<Country>, CountriesRepository>();
+            services.AddTransient<ICollectionRepository<Season>, SeasonsRepository>();
+            services.AddTransient<FixtureType>();
+            services.AddTransient<CountryType>();
+            services.AddTransient<SeasonType>();
+            services.AddTransient<FixturesPredictionType>();
+
+            var sp = services.BuildServiceProvider();
+
+            services.AddScoped<ISchema>(_ => new NTPSchema(type => (GraphType)sp.GetService(type))
+            { Query = sp.GetService<NTPQuery>() });
+
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -44,6 +78,9 @@ namespace HopZoneV2
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
+            app.UseGraphQL<AppSchema>();
+            app.UseGraphQLPlayground(options: new GraphQLPlaygroundOptions());
+
 
             app.UseMvc(routes =>
             {
