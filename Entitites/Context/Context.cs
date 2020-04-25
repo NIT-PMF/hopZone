@@ -90,13 +90,54 @@ namespace HopZoneV2.Entitites.Context
                 return _database.GetCollection<Post>("posts");
             }
         }
+
+        public IMongoCollection<Admin> Admins
+        {
+            get
+            {
+                return _database.GetCollection<Admin>("admins");
+            }
+        }
+
+        public IMongoCollection<Gender> Genders
+        {
+            get
+            {
+                return _database.GetCollection<Gender>("genders");
+            }
+        }
+        public IMongoCollection<Role> Roles
+        {
+            get
+            {
+                return _database.GetCollection<Role>("roles");
+            }
+        }
+        public IMongoCollection<City> Cities
+        {
+            get
+            {
+                return _database.GetCollection<City>("cities");
+            }
+        }
+
+        public IMongoCollection<User> Users
+        {
+            get
+            {
+                return _database.GetCollection<User>("users");
+            }
+        }
+
+        public IMongoCollection<Contact> Contacts
+        {
+            get
+            {
+                return _database.GetCollection<Contact>("contacts");
+            }
+        }
+
         public object Owners { get; internal set; }
-        public DbSet<Admin> Admins { get; set; }
-        public DbSet<User> Users { get; set; }
-        public DbSet<Gender> Genders { get; set; }
-        public DbSet<Role> Roles { get; set; }
-        public DbSet<City> Cities { get; set; }
-        public DbSet<Contact> Contacts { get; set; }
     }
 
 }

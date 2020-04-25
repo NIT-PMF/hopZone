@@ -10,12 +10,12 @@ namespace HopZoneV2.Types
 {
     public class RouteType : ObjectGraphType<Route>
     {
-        public RouteType(ICollectionRepository<Route> routeRepository)
+        public RouteType()
         {
             Field(_ => _.Id, type: typeof(StringGraphType));
-            Field(_ => _.description, type: typeof(StringGraphType));
-            Field(_ => _.name, type: typeof(StringGraphType));
-            Field(_ => _.time_posted, type: typeof(TimeSpanSecondsGraphType));
+            Field(_ => _.Description, type: typeof(StringGraphType));
+            Field(_ => _.Name, type: typeof(StringGraphType));
+            Field(_ => _.TimePosted, type: typeof(DateTimeGraphType));
             Field(_ => _.Id_spots, type: typeof(ListGraphType<StringGraphType>));
             Field(_ => _.Id_city, type: typeof(StringGraphType));
 

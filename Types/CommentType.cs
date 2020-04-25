@@ -10,12 +10,12 @@ namespace HopZoneV2.Types
 {
     public class CommentType : ObjectGraphType<Comment>
     {
-        public CommentType(ICollectionRepository<Comment> routeRepository)
+        public CommentType()
         {
             Field(_ => _.Id, type: typeof(StringGraphType));
-            Field(_ => _.comment, type: typeof(StringGraphType));
-            Field(_ => _.laik, type: typeof(IntGraphType));
-            Field(_ => _.time_written, type: typeof(TimeSpanSecondsGraphType));
+            Field(_ => _.Body, type: typeof(StringGraphType));
+            Field(_ => _.Like, type: typeof(IntGraphType));
+            Field(_ => _.TimeWritten, type: typeof(DateGraphType));
             Field(_ => _.Id_post, type: typeof(StringGraphType));
             Field(_ => _.Id_user, type: typeof(StringGraphType));
 

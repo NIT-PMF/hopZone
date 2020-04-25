@@ -11,9 +11,9 @@ namespace HopZoneV2.Models
     {
         [BsonId]
         public ObjectId Id { get; set; }
-        public String description { get; set; }
+        public string Description { get; set; }
 
-        public String image_url { get; set; }
+        public string ImageURL { get; set; }
         public string Id_map_coordinate { get; set; }
         public string Id_city { get; set; }
     }

@@ -7,6 +7,7 @@ using HopZoneV2.Models;
 using HopZoneV2.Settings;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using MongoDB.Driver;
 
 namespace HopZoneV2.Repository
 {
@@ -23,7 +24,7 @@ namespace HopZoneV2.Repository
         {
             return await _context
                 .Cities
-                .Include(_ => true)
+                .Find(_ => true)
                 .ToListAsync();
         }
 

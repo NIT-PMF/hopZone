@@ -1,20 +1,17 @@
 using GraphiQl;
 using GraphQL;
-using GraphQL.Server;
 using GraphQL.Server.Ui.Playground;
 using GraphQL.Types;
 using HopZoneV2.Models;
 using HopZoneV2.Queries;
 using HopZoneV2.Repository;
 using HopZoneV2.Settings;
+using HopZoneV2.Types;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Newtonsoft.Json;
 
 namespace HopZoneV2
 {
@@ -61,6 +58,16 @@ namespace HopZoneV2
 
             services.AddTransient<FixtureType>();
             services.AddTransient<CountryType>();
+            services.AddTransient<AdminType>();
+            services.AddTransient<CityType>();
+            services.AddTransient<GenderType>();
+            services.AddTransient<MapCoordinteType>();
+            services.AddTransient<UserType>();
+            services.AddTransient<SpotType>();
+            services.AddTransient<RouteType>();
+            services.AddTransient<PostType>();
+            services.AddTransient<ContactType>();
+            services.AddTransient<CommentType>();
             services.AddTransient<SeasonType>();
             services.AddTransient<FixturesPredictionType>();
 

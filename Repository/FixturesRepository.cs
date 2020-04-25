@@ -1,6 +1,4 @@
-﻿
-
-using HopZoneV2.Entitites.Context;
+﻿using HopZoneV2.Entitites.Context;
 using HopZoneV2.Models;
 using HopZoneV2.Settings;
 using Microsoft.Extensions.Options;

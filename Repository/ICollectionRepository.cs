@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson;
+﻿using HopZoneV2.Models;
+using MongoDB.Bson;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

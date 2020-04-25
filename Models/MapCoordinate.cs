@@ -11,7 +11,7 @@ namespace HopZoneV2.Models
     {
         [BsonId]
         public ObjectId Id { get; set; }
-        public double longitude { get; set; }
-        public double latitude { get; set; }
+        public double Longitude { get; set; }
+        public double Latitude { get; set; }
     }
 }

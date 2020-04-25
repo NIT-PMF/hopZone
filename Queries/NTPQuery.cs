@@ -15,12 +15,9 @@ namespace HopZoneV2.Queries
             ICollectionRepository<Country> countriesRepository,
             ITeamsCollectionRepository<Fixture> fixturesRepository,
             ICollectionRepository<Season> seasonsRepository,
-            ICollectionRepository<Admin> adminRepository
-
-
+            ICollectionRepository<Admin> adminsRepository
          )
         {
-
 
             Field<AdminType>
             (
@@ -30,7 +27,7 @@ namespace HopZoneV2.Queries
                     new QueryArgument<NonNullGraphType<StringGraphType>>
                     { Name = "code", Description = "Country code" }
                 ),
-                resolve: context => adminRepository
+                resolve: context => adminsRepository
                     .GetItemAsync("code", context.GetArgument<string>("code"))
                     .Result
             );
@@ -38,7 +35,7 @@ namespace HopZoneV2.Queries
             Field<ListGraphType<AdminType>>
             (
                 "admins",
-                resolve: context => adminRepository
+                resolve: context => adminsRepository
                     .GetItemsAsync()
                     .Result
             );

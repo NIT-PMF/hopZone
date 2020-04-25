@@ -11,9 +11,9 @@ namespace HopZoneV2.Models
     {
         [BsonId]
         public ObjectId Id { get; set; }
-        public string  comment { get; set; }
-        public TimeSpan time_written { get; set; }
-        public int laik { get; set; }
+        public string  Body { get; set; }
+        public DateTime TimeWritten { get; set; }
+        public int Like { get; set; }
         public string Id_user { get; set; }
         public string Id_post { get; set; }
     }
