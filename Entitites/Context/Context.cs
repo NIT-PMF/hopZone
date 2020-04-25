@@ -1,5 +1,7 @@
-﻿using HopZoneV2.Models;
+﻿using HopZone.Models;
+using HopZoneV2.Models;
 using HopZoneV2.Settings;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using System;
@@ -54,6 +56,12 @@ namespace HopZoneV2.Entitites.Context
         }
 
         public object Owners { get; internal set; }
+        public DbSet<Admin> Admins { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Gender> Genders { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
     }
 
 }

@@ -5,19 +5,12 @@ namespace HopZoneV2.Repository
 {
     public class CountryType : ObjectGraphType<Country>
     {
-        public CountryType(ICollectionRepository<Season> seasonsRepository)
+        public CountryType()
         {
             Field(country => country.Id, type: typeof(StringGraphType));
             Field(country => country.Id_country, type: typeof(IntGraphType));
-            Field(country => country.Name, type: typeof(StringGraphType));
-            Field(country => country.Code, type: typeof(StringGraphType));
-            
-            Field<ListGraphType<SeasonType>>(
-               "seasons",
-               resolve: context => seasonsRepository
-                   .GetItemsAsync("Id_country", context.Source.Id_country)
-                   .Result
-            );
+            Field(country => country.Name, type: typeof(StringGraphType)).Description("Name of Country");
+            Field(country => country.Code, type: typeof(StringGraphType)).Description("Country Code (if exists)");
         }
     }
 }
