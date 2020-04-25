@@ -55,6 +55,41 @@ namespace HopZoneV2.Entitites.Context
             }
         }
 
+        public IMongoCollection<Spot> Spot
+        {
+            get
+            {
+                return _database.GetCollection<Spot>("spots");
+            }
+        }
+        public IMongoCollection<Route> Route
+        {
+            get
+            {
+                return _database.GetCollection<Route>("routes");
+            }
+        }
+        public IMongoCollection<Comment> Comment
+        {
+            get
+            {
+                return _database.GetCollection<Comment>("comment");
+            }
+        }
+        public IMongoCollection<MapCoordinate> MapCoordinate
+        {
+            get
+            {
+                return _database.GetCollection<MapCoordinate>("mapcoordinates");
+            }
+        }
+        public IMongoCollection<Post> Post
+        {
+            get
+            {
+                return _database.GetCollection<Post>("posts");
+            }
+        }
         public object Owners { get; internal set; }
         public DbSet<Admin> Admins { get; set; }
         public DbSet<User> Users { get; set; }

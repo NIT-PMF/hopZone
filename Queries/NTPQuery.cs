@@ -4,6 +4,7 @@ using GraphQL.Types;
 using HopZoneV2.Models;
 using HopZoneV2.Repository;
 using HopZoneV2.Settings;
+using HopZoneV2.Types;
 
 namespace HopZoneV2.Queries
 {
@@ -13,9 +14,36 @@ namespace HopZoneV2.Queries
         (
             ICollectionRepository<Country> countriesRepository,
             ITeamsCollectionRepository<Fixture> fixturesRepository,
-            ICollectionRepository<Season> seasonsRepository
-        )
+            ICollectionRepository<Season> seasonsRepository,
+            ICollectionRepository<Admin> adminRepository
+
+
+         )
         {
+
+
+            Field<AdminType>
+            (
+                "admin",
+                arguments: new QueryArguments
+                (
+                    new QueryArgument<NonNullGraphType<StringGraphType>>
+                    { Name = "code", Description = "Country code" }
+                ),
+                resolve: context => adminRepository
+                    .GetItemAsync("code", context.GetArgument<string>("code"))
+                    .Result
+            );
+
+            Field<ListGraphType<AdminType>>
+            (
+                "admins",
+                resolve: context => adminRepository
+                    .GetItemsAsync()
+                    .Result
+            );
+
+
             Field<CountryType>
             (
                 "country",

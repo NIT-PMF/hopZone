@@ -45,6 +45,20 @@ namespace HopZoneV2
             services.AddTransient<ITeamsCollectionRepository<Fixture>, FixturesRepository>();
             services.AddTransient<ICollectionRepository<Country>, CountriesRepository>();
             services.AddTransient<ICollectionRepository<Season>, SeasonsRepository>();
+
+            services.AddTransient<IRouteRepository<Route>, RouteRepository>();
+            services.AddTransient<ISpotRepository<Spot>, SpotRepository>();
+            services.AddTransient<ICommentRepository<Comment>, CommentRepository>();
+            services.AddTransient<IMapCoordinateRepository<MapCoordinate>, MapCoordinateRepository>();
+            services.AddTransient<IPostRepository<Post>, PostRepository>();
+
+            services.AddTransient<ICollectionRepository<Admin>, AdminRepository>();
+            services.AddTransient<ICollectionRepository<City>, CityRepository>();
+            services.AddTransient<ICollectionRepository<Contact>, ContactRepository>();
+            services.AddTransient<ICollectionRepository<Gender>, GenderRepository>();
+
+
+
             services.AddTransient<FixtureType>();
             services.AddTransient<CountryType>();
             services.AddTransient<SeasonType>();
