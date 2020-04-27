@@ -5,7 +5,7 @@
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
     <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
     <IsPackable>false</IsPackable>
-    <SpaRoot>ClientApp\</SpaRoot>
+    <SpaRoot>NIT.HopZone.FrontEnd</SpaRoot>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
     <OutputType>WinExe</OutputType>
     <StartupObject>NIT.HopZone.Web.Program</StartupObject>
@@ -34,11 +34,61 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\src\api\" />
+    <Folder Include="NIT.HopZone.FrontEnd\src\api\" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="ClientApp\src\assets\images\logoHopzone.svg">
+    <None Include="NIT.HopZone.FrontEnd\package-lock.json" />
+    <None Include="NIT.HopZone.FrontEnd\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\public\manifest.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\containers\DefaultLayout\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Base\Breadcrumbs\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Base\Cards\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Base\Carousels\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Base\Collapses\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Base\Dropdowns\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Base\Forms\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Base\Jumbotrons\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Base\ListGroups\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Base\Navbars\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Base\Navs\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Base\Paginations\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Base\Popovers\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Base\ProgressBar\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Base\Switches\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Base\Tables\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Base\Tabs\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Base\Tooltips\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Buttons\BrandButtons\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Buttons\ButtonDropdowns\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Buttons\ButtonGroups\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Buttons\Buttons\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Charts\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Dashboard\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Icons\CoreUIIcons\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Icons\Flags\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Icons\FontAwesome\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Icons\SimpleLineIcons\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Notifications\Alerts\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Notifications\Badges\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Notifications\Modals\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Pages\Login\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Pages\Page404\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Pages\Page500\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Pages\Register\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Theme\Colors\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Theme\Typography\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Users\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Widgets\package.json" />
+    <None Include="NIT.HopZone.FrontEnd\src\data\features.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="NIT.Projects\NIT.Projects.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="NIT.HopZone.FrontEnd\src\assets\images\logoHopzone.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
