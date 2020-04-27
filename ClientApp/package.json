@@ -1,15 +1,14 @@
 {
-  "name": "@coreui/coreui-free-react-admin-template",
-  "version": "2.6.0",
-  "description": "CoreUI React Open Source Bootstrap 4 Admin Template",
-  "author": "Łukasz Holeczek",
-  "homepage": "https://coreui.io",
-  "copyright": "Copyright 2017-2019 creativeLabs Łukasz Holeczek",
+  "name": "hopzone",
+  "version": "1.0.0",
+  "description": "HopZone Website - Ease Travelling",
+  "author": "Irhad, Tarik, Naser",
+  "copyright": "Copyright 2020 NIT Company",
   "license": "MIT",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git@github.com:coreui/coreui-free-react-admin-template.git"
+    "url": "git@github.com/NIT-PMF/hopZone"
   },
   "dependencies": {
     "@coreui/coreui": "^2.1.16",

@@ -1,13 +1,13 @@
 ﻿using GraphQL;
 using GraphQL.Types;
-using HopZoneV2.Models;
+using NIT.HopZone.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HopZoneV2.Controllers
+namespace NIT.HopZone.Web.Controllers
 {
     [Produces("application/json")]
     [Route("graphql")]

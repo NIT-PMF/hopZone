@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HopZoneV2.Models
+namespace NIT.HopZone.Web.Models
 {
     public class Country
     {

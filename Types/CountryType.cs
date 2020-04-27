@@ -1,7 +1,7 @@
 ﻿using GraphQL.Types;
-using HopZoneV2.Models;
+using NIT.HopZone.Web.Models;
 
-namespace HopZoneV2.Repository
+namespace NIT.HopZone.Web.Repository
 {
     public class CountryType : ObjectGraphType<Country>
     {

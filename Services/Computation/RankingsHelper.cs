@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HopZoneV2.Settings
+namespace NIT.HopZone.Web.Settings
 {
     public partial class RankingsHelper
     {

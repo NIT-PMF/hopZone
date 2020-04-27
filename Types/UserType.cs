@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using GraphQL.Types;
 using HopZone.Models;
 
-namespace HopZoneV2.Types
+namespace NIT.HopZone.Web.Types
 {
     public class UserType : ObjectGraphType<User>
     {

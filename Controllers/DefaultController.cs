@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using HopZoneV2.Models;
+using NIT.HopZone.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace HopZoneV2.Controllers
+namespace NIT.HopZone.Web.Controllers
 {/*
     
     [Route("/")]

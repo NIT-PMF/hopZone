@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HopZoneV2.Controllers
+namespace NIT.HopZone.Web.Controllers
 {
     internal class JsonAdapter
     {

@@ -1,7 +1,7 @@
 ﻿using GraphQL.Types;
-using HopZoneV2.Models;
+using NIT.HopZone.Web.Models;
 
-namespace HopZoneV2.Types
+namespace NIT.HopZone.Web.Types
 {
     public class AdminType : ObjectGraphType<Admin>
     {

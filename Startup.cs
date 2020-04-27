@@ -2,18 +2,18 @@ using GraphiQl;
 using GraphQL;
 using GraphQL.Server.Ui.Playground;
 using GraphQL.Types;
-using HopZoneV2.Models;
-using HopZoneV2.Queries;
-using HopZoneV2.Repository;
-using HopZoneV2.Settings;
-using HopZoneV2.Types;
+using NIT.HopZone.Web.Models;
+using NIT.HopZone.Web.Queries;
+using NIT.HopZone.Web.Repository;
+using NIT.HopZone.Web.Settings;
+using NIT.HopZone.Web.Types;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace HopZoneV2
+namespace NIT.HopZone.Web
 {
     public class Startup
     {

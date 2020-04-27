@@ -1,10 +1,10 @@
-﻿using HopZoneV2.Models;
+﻿using NIT.HopZone.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HopZoneV2.Repository
+namespace NIT.HopZone.Web.Repository
 {
     public interface IPostRepository<T>
     {

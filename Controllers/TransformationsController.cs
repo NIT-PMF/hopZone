@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HopZoneV2.Controllers
+namespace NIT.HopZone.Web.Controllers
 {
     [Route("transform")]
     public class TransformationsController : Controller

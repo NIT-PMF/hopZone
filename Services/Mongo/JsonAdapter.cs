@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using HopZoneV2.Models;
+using NIT.HopZone.Web.Models;
 using MongoDB.Bson;
 using Newtonsoft.Json;
 
 
 
-namespace HopZoneV2.Settings
+namespace NIT.HopZone.Web.Settings
 {
     public class JsonAdapter
     {

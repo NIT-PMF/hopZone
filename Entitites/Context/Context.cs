@@ -1,6 +1,6 @@
 ﻿using HopZone.Models;
-using HopZoneV2.Models;
-using HopZoneV2.Settings;
+using NIT.HopZone.Web.Models;
+using NIT.HopZone.Web.Settings;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HopZoneV2.Entitites.Context
+namespace NIT.HopZone.Web.Entitites.Context
 {
     public class Context
     {

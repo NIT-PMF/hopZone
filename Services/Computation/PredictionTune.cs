@@ -1,7 +1,7 @@
-﻿using HopZoneV2.Models;
+﻿using NIT.HopZone.Web.Models;
 using System;
 using System.Collections;
-namespace HopZoneV2.Settings
+namespace NIT.HopZone.Web.Settings
 {
     public static class PredictionTune
     {

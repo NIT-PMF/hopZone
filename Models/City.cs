@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace HopZoneV2.Models
+namespace NIT.HopZone.Web.Models
 {
     public class City
     {

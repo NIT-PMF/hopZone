@@ -1,4 +1,4 @@
-﻿namespace HopZoneV2.Settings
+﻿namespace NIT.HopZone.Web.Settings
 {
     public static class GoalsHelper
     {

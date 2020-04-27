@@ -1,6 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using HopZoneV2.Models;
+using NIT.HopZone.Web.Models;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 

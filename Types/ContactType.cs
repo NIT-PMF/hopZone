@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GraphQL.Types;
-using HopZoneV2.Models;
+using NIT.HopZone.Web.Models;
 
-namespace HopZoneV2.Types
+namespace NIT.HopZone.Web.Types
 {
     public class ContactType : ObjectGraphType<Contact>
     {

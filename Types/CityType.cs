@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GraphQL.Types;
-using HopZoneV2.Models;
-using HopZoneV2.Repository;
+using NIT.HopZone.Web.Models;
+using NIT.HopZone.Web.Repository;
 
-namespace HopZoneV2.Types
+namespace NIT.HopZone.Web.Types
 {
     public class CityType : ObjectGraphType<City>
     {

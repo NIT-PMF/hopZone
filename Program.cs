@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace HopZoneV2
+namespace NIT.HopZone.Web
 {
     public class Program
     {

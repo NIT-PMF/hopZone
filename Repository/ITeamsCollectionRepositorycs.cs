@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace HopZoneV2.Repository
+namespace NIT.HopZone.Web.Repository
 {
     public interface ITeamsCollectionRepository<T> : ICollectionRepository<T>
     {

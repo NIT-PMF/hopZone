@@ -1,8 +1,8 @@
 ﻿using System;
 using GraphQL.Types;
-using HopZoneV2.Queries;
+using NIT.HopZone.Web.Queries;
 
-namespace HopZoneV2.Repository
+namespace NIT.HopZone.Web.Repository
 {
     public class NTPSchema : Schema
     {

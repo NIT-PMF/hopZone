@@ -1,12 +1,12 @@
 ﻿
 using System.Linq;
 using GraphQL.Types;
-using HopZoneV2.Models;
-using HopZoneV2.Repository;
-using HopZoneV2.Settings;
-using HopZoneV2.Types;
+using NIT.HopZone.Web.Models;
+using NIT.HopZone.Web.Repository;
+using NIT.HopZone.Web.Settings;
+using NIT.HopZone.Web.Types;
 
-namespace HopZoneV2.Queries
+namespace NIT.HopZone.Web.Queries
 {
     public class NTPQuery : ObjectGraphType
     {

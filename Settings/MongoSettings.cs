@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HopZoneV2.Settings
+namespace NIT.HopZone.Web.Settings
 {
     public class MongoSettings
     {

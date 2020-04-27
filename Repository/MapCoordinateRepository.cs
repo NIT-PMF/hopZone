@@ -1,6 +1,6 @@
-﻿using HopZoneV2.Entitites.Context;
-using HopZoneV2.Models;
-using HopZoneV2.Settings;
+﻿using NIT.HopZone.Web.Entitites.Context;
+using NIT.HopZone.Web.Models;
+using NIT.HopZone.Web.Settings;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using System;
@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HopZoneV2.Repository
+namespace NIT.HopZone.Web.Repository
 {
     public class MapCoordinateRepository : IMapCoordinateRepository<MapCoordinate>
     {

@@ -7,7 +7,7 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using Newtonsoft.Json.Serialization;
 
-namespace HopZoneV2.Models
+namespace NIT.HopZone.Web.Models
 {
     public class Admin
     {
