@@ -9,6 +9,7 @@ namespace NIT.HopZone.Web.Repository
         public NTPSchema(Func<Type, GraphType> resolveType) : base(resolveType)
         {
             Query = (NTPQuery)resolveType(typeof(NTPQuery));
+            Mutation = (NTPMutation)resolveType(typeof(NTPMutation));
         }
     }
 }

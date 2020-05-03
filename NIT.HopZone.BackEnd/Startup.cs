@@ -38,6 +38,7 @@ namespace NIT.HopZone.Web
             });
 
             services.AddScoped<NTPQuery>();
+            services.AddScoped<NTPMutation>();
             services.AddScoped<IDocumentExecuter, DocumentExecuter>();
 
             services.AddTransient<ITeamsCollectionRepository<Fixture>, FixturesRepository>();
@@ -71,11 +72,16 @@ namespace NIT.HopZone.Web
             services.AddTransient<CommentType>();
             services.AddTransient<SeasonType>();
             services.AddTransient<FixturesPredictionType>();
+            services.AddTransient<BackEnd.InputTypes.AdminInputType>();
+            services.AddTransient<BackEnd.Data.HopZoneData>();
 
             var sp = services.BuildServiceProvider();
 
             services.AddScoped<ISchema>(_ => new NTPSchema(type => (GraphType)sp.GetService(type))
-            { Query = sp.GetService<NTPQuery>() });
+            {
+                Query = sp.GetService<NTPQuery>(),
+                Mutation = sp.GetService<NTPMutation>()
+            });
 
 
             // In production, the React files will be served from this directory

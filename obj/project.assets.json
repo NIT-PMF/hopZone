@@ -4847,16 +4847,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
-      },
-      "NIT.Projects/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/NIT.Projects.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/NIT.Projects.dll": {}
-        }
       }
     }
   },
@@ -13187,11 +13177,6 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
-    },
-    "NIT.Projects/1.0.0": {
-      "type": "project",
-      "path": "NIT.Projects/NIT.Projects.csproj",
-      "msbuildProject": "NIT.Projects/NIT.Projects.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -13204,8 +13189,7 @@
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.AspNetCore.SpaServices.Extensions >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0",
-      "MongoDB.Driver >= 2.10.2",
-      "NIT.Projects >= 1.0.0"
+      "MongoDB.Driver >= 2.10.2"
     ]
   },
   "packageFolders": {
@@ -13233,11 +13217,7 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {
-            "C:\\Users\\DaenerysPC\\source\\repos\\NIT.Projects\\NIT.Projects\\NIT.Projects.csproj": {
-              "projectPath": "C:\\Users\\DaenerysPC\\source\\repos\\NIT.Projects\\NIT.Projects\\NIT.Projects.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

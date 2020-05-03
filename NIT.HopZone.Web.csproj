@@ -7,7 +7,7 @@
     <IsPackable>false</IsPackable>
     <SpaRoot>NIT.HopZone.FrontEnd</SpaRoot>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <StartupObject>NIT.HopZone.Web.Program</StartupObject>
     <Company>NIT</Company>
     <Product>HopZone</Product>
@@ -81,10 +81,6 @@
     <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Users\package.json" />
     <None Include="NIT.HopZone.FrontEnd\src\AdminPage\views\Widgets\package.json" />
     <None Include="NIT.HopZone.FrontEnd\src\data\features.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="NIT.Projects\NIT.Projects.csproj" />
   </ItemGroup>
 
   <ItemGroup>
