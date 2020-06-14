@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header1 from '../Header1/Header1';
 import { Irhad, Naser, Tarik } from '../../assets/images/';
 import './index.css';
+import gql from 'graphql-tag';
+import { useQuery } from '@apollo/react-hooks';
+
+
+
+const GET_ROLES = gql`
+{
+  roles{
+    id
+    authority
+  }
+}`;
+
 
 const AboutPage = () => {
+
+  const { loading, error, data } = useQuery(GET_ROLES);
+
+  
 
   document.title = "HopZone | About NIT";
 
@@ -29,6 +46,7 @@ const AboutPage = () => {
 
   return (
     <div className="about-page-main">
+      {!loading && console.log(data)}
       <div className="about-page-content">
         <Header1 size="2rem" color="white"> About Us </Header1>
 
