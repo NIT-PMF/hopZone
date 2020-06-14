@@ -207,7 +207,6 @@ C:\Users\DaenerysPC\Desktop\hopzone project\hopZone\bin\Debug\netcoreapp2.1\NIT.
 C:\Users\DaenerysPC\Desktop\hopzone project\hopZone\bin\Debug\netcoreapp2.1\NIT.HopZone.Web.Views.dll
 C:\Users\DaenerysPC\Desktop\hopzone project\hopZone\bin\Debug\netcoreapp2.1\NIT.HopZone.Web.Views.pdb
 C:\Users\DaenerysPC\Desktop\hopzone project\hopZone\obj\Debug\netcoreapp2.1\NIT.HopZone.Web.csprojAssemblyReference.cache
-C:\Users\DaenerysPC\Desktop\hopzone project\hopZone\obj\Debug\netcoreapp2.1\NIT.HopZone.Web.csproj.CoreCompileInputs.cache
 C:\Users\DaenerysPC\Desktop\hopzone project\hopZone\obj\Debug\netcoreapp2.1\NIT.HopZone.Web.RazorAssemblyInfo.cache
 C:\Users\DaenerysPC\Desktop\hopzone project\hopZone\obj\Debug\netcoreapp2.1\NIT.HopZone.Web.RazorAssemblyInfo.cs
 C:\Users\DaenerysPC\Desktop\hopzone project\hopZone\obj\Debug\netcoreapp2.1\NIT.HopZone.Web.AssemblyInfoInputs.cache
@@ -225,3 +224,5 @@ C:\Users\DaenerysPC\Desktop\hopzone project\hopZone\obj\Debug\netcoreapp2.1\NIT.
 C:\Users\DaenerysPC\Desktop\hopzone project\hopZone\obj\Debug\netcoreapp2.1\NIT.HopZone.Web.pdb
 C:\Users\DaenerysPC\Desktop\hopzone project\hopZone\obj\Debug\netcoreapp2.1\NIT.HopZone.Web.genruntimeconfig.cache
 C:\Users\DaenerysPC\Desktop\hopzone project\hopZone\obj\Debug\netcoreapp2.1\NIT.HopZone.Web.csproj.CopyComplete
+C:\Users\DaenerysPC\Desktop\hopzone project\hopZone\bin\Debug\netcoreapp2.1\package-lock.json
+C:\Users\DaenerysPC\Desktop\hopzone project\hopZone\obj\Debug\netcoreapp2.1\NIT.HopZone.Web.csproj.CoreCompileInputs.cache

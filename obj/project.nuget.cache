@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "almJM+RM7+OoKfCOqI2DL6+YZKl8fffegP3TtcMvSpQCvBsHXSdScFQOtdyPk+kAocX9K5ULG9S4wAeWS5M8Ew==",
+  "dgSpecHash": "ihJheg8TwsjOfUqPQZVFqd+NmK+BMhkA/M9qJgc5EBzlmDyJDw3a9SbtPGuVnPJ4LQLeXcsH529/BslgcClLtg==",
   "success": true,
   "projectFilePath": "C:\\Users\\DaenerysPC\\Desktop\\hopzone project\\hopZone\\NIT.HopZone.Web.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,16 @@
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\graphql-parser\\3.0.0\\graphql-parser.3.0.0.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\graphql.server.core\\3.4.0\\graphql.server.core.3.4.0.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\graphql.server.ui.playground\\3.4.0\\graphql.server.ui.playground.3.4.0.nupkg.sha512",
+    "C:\\Users\\DaenerysPC\\.nuget\\packages\\greendonut\\1.1.0\\greendonut.1.1.0.nupkg.sha512",
+    "C:\\Users\\DaenerysPC\\.nuget\\packages\\hotchocolate\\0.6.11\\hotchocolate.0.6.11.nupkg.sha512",
+    "C:\\Users\\DaenerysPC\\.nuget\\packages\\hotchocolate.abstractions\\0.6.11\\hotchocolate.abstractions.0.6.11.nupkg.sha512",
+    "C:\\Users\\DaenerysPC\\.nuget\\packages\\hotchocolate.language\\0.6.11\\hotchocolate.language.0.6.11.nupkg.sha512",
+    "C:\\Users\\DaenerysPC\\.nuget\\packages\\hotchocolate.runtime\\0.6.11\\hotchocolate.runtime.0.6.11.nupkg.sha512",
+    "C:\\Users\\DaenerysPC\\.nuget\\packages\\hotchocolate.subscriptions\\0.6.11\\hotchocolate.subscriptions.0.6.11.nupkg.sha512",
+    "C:\\Users\\DaenerysPC\\.nuget\\packages\\hotchocolate.types\\0.6.11\\hotchocolate.types.0.6.11.nupkg.sha512",
+    "C:\\Users\\DaenerysPC\\.nuget\\packages\\identitymodel\\4.3.0\\identitymodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\DaenerysPC\\.nuget\\packages\\identityserver4\\2.5.4\\identityserver4.2.5.4.nupkg.sha512",
+    "C:\\Users\\DaenerysPC\\.nuget\\packages\\identityserver4.storage\\2.5.4\\identityserver4.storage.2.5.4.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.aspnetcore\\2.1.1\\microsoft.aspnetcore.2.1.1.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.1.1\\microsoft.aspnetcore.antiforgery.2.1.1.nupkg.sha512",
@@ -104,9 +114,9 @@
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.aspnetcore.staticfiles\\2.1.1\\microsoft.aspnetcore.staticfiles.2.1.1.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.aspnetcore.websockets\\2.1.1\\microsoft.aspnetcore.websockets.2.1.1.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.1.1\\microsoft.aspnetcore.webutilities.2.1.1.nupkg.sha512",
-    "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\1.1.0\\microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512",
-    "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.codeanalysis.common\\2.8.0\\microsoft.codeanalysis.common.2.8.0.nupkg.sha512",
-    "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.codeanalysis.csharp\\2.8.0\\microsoft.codeanalysis.csharp.2.8.0.nupkg.sha512",
+    "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\2.6.1\\microsoft.codeanalysis.analyzers.2.6.1.nupkg.sha512",
+    "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.codeanalysis.common\\2.9.0\\microsoft.codeanalysis.common.2.9.0.nupkg.sha512",
+    "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.codeanalysis.csharp\\2.9.0\\microsoft.codeanalysis.csharp.2.9.0.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.codeanalysis.razor\\2.1.1\\microsoft.codeanalysis.razor.2.1.1.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\2.1.0\\microsoft.dotnet.platformabstractions.2.1.0.nupkg.sha512",
@@ -160,11 +170,12 @@
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\2.1.1\\microsoft.extensions.options.configurationextensions.2.1.1.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.extensions.primitives\\2.1.1\\microsoft.extensions.primitives.2.1.1.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.extensions.webencoders\\2.1.1\\microsoft.extensions.webencoders.2.1.1.nupkg.sha512",
-    "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.identitymodel.logging\\5.2.0\\microsoft.identitymodel.logging.5.2.0.nupkg.sha512",
+    "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\5.2.4\\microsoft.identitymodel.jsonwebtokens.5.2.4.nupkg.sha512",
+    "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.identitymodel.logging\\5.2.4\\microsoft.identitymodel.logging.5.2.4.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.identitymodel.protocols\\5.2.0\\microsoft.identitymodel.protocols.5.2.0.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\5.2.0\\microsoft.identitymodel.protocols.openidconnect.5.2.0.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.identitymodel.protocols.wsfederation\\5.2.0\\microsoft.identitymodel.protocols.wsfederation.5.2.0.nupkg.sha512",
-    "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.identitymodel.tokens\\5.2.0\\microsoft.identitymodel.tokens.5.2.0.nupkg.sha512",
+    "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.identitymodel.tokens\\5.2.4\\microsoft.identitymodel.tokens.5.2.4.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.identitymodel.tokens.saml\\5.2.0\\microsoft.identitymodel.tokens.saml.5.2.0.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.identitymodel.xml\\5.2.0\\microsoft.identitymodel.xml.5.2.0.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\microsoft.net.http.headers\\2.1.1\\microsoft.net.http.headers.2.1.1.nupkg.sha512",
@@ -221,7 +232,7 @@
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.data.sqlclient\\4.5.1\\system.data.sqlclient.4.5.1.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.diagnostics.contracts\\4.3.0\\system.diagnostics.contracts.4.3.0.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
-    "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.5.0\\system.diagnostics.diagnosticsource.4.5.0.nupkg.sha512",
+    "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.5.1\\system.diagnostics.diagnosticsource.4.5.1.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.diagnostics.fileversioninfo\\4.3.0\\system.diagnostics.fileversioninfo.4.3.0.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.diagnostics.process\\4.1.0\\system.diagnostics.process.4.1.0.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.diagnostics.stacktrace\\4.3.0\\system.diagnostics.stacktrace.4.3.0.nupkg.sha512",
@@ -233,7 +244,7 @@
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.globalization.calendars\\4.3.0\\system.globalization.calendars.4.3.0.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.globalization.extensions\\4.3.0\\system.globalization.extensions.4.3.0.nupkg.sha512",
-    "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.identitymodel.tokens.jwt\\5.2.0\\system.identitymodel.tokens.jwt.5.2.0.nupkg.sha512",
+    "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.identitymodel.tokens.jwt\\5.2.4\\system.identitymodel.tokens.jwt.5.2.4.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.interactive.async\\3.1.1\\system.interactive.async.3.1.1.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.io.compression\\4.3.0\\system.io.compression.4.3.0.nupkg.sha512",
@@ -293,7 +304,7 @@
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.text.encoding.extensions\\4.3.0\\system.text.encoding.extensions.4.3.0.nupkg.sha512",
-    "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
+    "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.text.encodings.web\\4.7.0\\system.text.encodings.web.4.7.0.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.text.regularexpressions\\4.3.0\\system.text.regularexpressions.4.3.0.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.threading.channels\\4.5.0\\system.threading.channels.4.5.0.nupkg.sha512",
@@ -310,5 +321,26 @@
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\DaenerysPC\\.nuget\\packages\\system.xml.xpath.xdocument\\4.3.0\\system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: IdentityServer4 2.5.4 requires IdentityModel (>= 3.10.10 && < 4.0.0) but version IdentityModel 4.3.0 was resolved.",
+      "libraryId": "IdentityModel",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: IdentityServer4.Storage 2.5.4 requires IdentityModel (>= 3.10.10 && < 4.0.0) but version IdentityModel 4.3.0 was resolved.",
+      "libraryId": "IdentityModel",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    }
+  ]
 }

@@ -1,9 +1,11 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using HopZone.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using NIT.HopZone.Web.Entitites.Context;
 using NIT.HopZone.Web.NIT.HopZone.BackEnd.Repository;
@@ -27,15 +29,6 @@ namespace NIT.HopZone.Web.Repository
                 .Find(_ => true)
                 .ToListAsync();
         }
-        public Task<User> GetItemAsync(string paramName, object paramValue)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<User>> GetItemsAsync(string paramName, object paramValue)
-        {
-            throw new NotImplementedException();
-        }
 
         public async Task<User> insert(User user)
         {
@@ -44,11 +37,26 @@ namespace NIT.HopZone.Web.Repository
             return user;
 
         }
-
-
-        public Task<IEnumerable<User>> GetItemsAsync()
+        public async Task<IEnumerable<User>> GetUsers()
         {
-            throw new NotImplementedException();
+            return await _context
+                .Users
+                .Find(_ => true)
+                .ToListAsync();
         }
+
+        public async Task<User> GetUserByUsername(string key, string name)
+        {
+            try
+            {
+                return await _context.Users
+                    .Find(Builders<User>.Filter.Eq(key, name)).FirstOrDefaultAsync();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

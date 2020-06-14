@@ -1,7 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using GraphQL;
+using GraphQL.Instrumentation;
 using GraphQL.Types;
+using GraphQL.Validation;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NIT.HopZone.Web.Models;
 using NIT.HopZone.Web.NIT.HopZone.BackEnd.Controllers;
@@ -14,11 +19,19 @@ namespace NIT.HopZone.Web.Controllers
     {
         private readonly IDocumentExecuter _documentExecuter;
         private readonly ISchema _schema;
-
-        public GraphQLController(IDocumentExecuter documentExecuter, ISchema schema)
+        private readonly IValidationRule _validationRule;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public GraphQLController(
+            ISchema schema,
+            IDocumentExecuter executer,
+            IValidationRule validationRule,
+            IHttpContextAccessor httpContextAccessor)
         {
-            _documentExecuter = documentExecuter;
             _schema = schema;
+            _documentExecuter = executer;
+            _validationRule = validationRule;
+            _httpContextAccessor = httpContextAccessor;
+
         }
 
         [HttpPost]
@@ -30,19 +43,19 @@ namespace NIT.HopZone.Web.Controllers
 
             var inputs = query.Variables?.ToInputs();
 
-            
-
-
             var executionOptions = new ExecutionOptions
             {
                 Schema = _schema,
                 Query = query.Query,
-                Inputs = inputs
-
-            };
+                ValidationRules = new List<IValidationRule> { _validationRule },
+                UserContext = _httpContextAccessor.HttpContext.User,
+                Inputs = inputs,
+                ComplexityConfiguration = new GraphQL.Validation.Complexity.ComplexityConfiguration { MaxDepth = 15 }
+        };
 
             try
             {
+
                 var result = await _documentExecuter
                     .ExecuteAsync(executionOptions)
                     .ConfigureAwait(false);

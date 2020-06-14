@@ -1,14 +1,22 @@
+using System.Text;
 using GraphiQl;
 using GraphQL;
 using GraphQL.Types;
+using GraphQL.Validation;
 using HopZone.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
+using NIT.HopZone.BackEnd.InputTypes;
 using NIT.HopZone.Web.Models;
+using NIT.HopZone.Web.NIT.HopZone.BackEnd.Helper.Test.GraphQL.MyCoreAPI.Helper;
 using NIT.HopZone.Web.NIT.HopZone.BackEnd.Repository;
+using NIT.HopZone.Web.NIT.HopZone.BackEnd.Repository.Interface;
 using NIT.HopZone.Web.Queries;
 using NIT.HopZone.Web.Repository;
 using NIT.HopZone.Web.Settings;
@@ -38,6 +46,15 @@ namespace NIT.HopZone.Web
                     = Configuration.GetSection("MongoConnection:Database").Value;
             });
 
+            services.AddAuthentication("Bearer")
+                    .AddJwtBearer("Bearer", options =>
+                    {
+                        options.Authority = "https://localhost:44309";
+                        options.RequireHttpsMetadata = false;
+                        options.SaveToken = true;
+                        options.Audience = "graphQLApi";
+                    });
+
             services.AddScoped<NTPQuery>();
             services.AddScoped<NTPMutation>();
             services.AddScoped<IDocumentExecuter, DocumentExecuter>();
@@ -51,10 +68,10 @@ namespace NIT.HopZone.Web
             services.AddTransient<IMapCoordinateRepository<MapCoordinate>, MapCoordinateRepository>();
             services.AddTransient<IPostRepository<Post>, PostRepository>();
             services.AddTransient<IUserRepository<User>, UserRepository>();
+            services.AddTransient<IContactRepository<Contact>, ContactRepository>();
 
             services.AddTransient<ICollectionRepository<Admin>, AdminRepository>();
             services.AddTransient<ICollectionRepository<City>, CityRepository>();
-            services.AddTransient<ICollectionRepository<Contact>, ContactRepository>();
             services.AddTransient<ICollectionRepository<Gender>, GenderRepository>();
 
             services.AddTransient<FixtureType>();
@@ -73,6 +90,12 @@ namespace NIT.HopZone.Web
             services.AddTransient<FixturesPredictionType>();
             services.AddTransient<BackEnd.InputTypes.AdminInputType>();
             services.AddTransient<BackEnd.InputTypes.UserInputType>();
+            services.AddTransient<BackEnd.InputTypes.ContactInputType>();
+
+            //Authentication
+            services.AddSingleton<IValidationRule, AuthValidationRule>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddIdentityServer();
 
             services.AddTransient<BackEnd.Data.HopZoneData>();
 
@@ -104,7 +127,6 @@ namespace NIT.HopZone.Web
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
             app.UseGraphiQl("/graphql");
-
 
             app.UseMvc(routes =>
             {
