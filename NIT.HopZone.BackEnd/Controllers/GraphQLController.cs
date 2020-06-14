@@ -4,10 +4,11 @@ using GraphQL;
 using GraphQL.Types;
 using Microsoft.AspNetCore.Mvc;
 using NIT.HopZone.Web.Models;
+using NIT.HopZone.Web.NIT.HopZone.BackEnd.Controllers;
 
 namespace NIT.HopZone.Web.Controllers
 {
-    [Produces("application/json")]
+
     [Route("graphql")]
     public class GraphQLController : Controller
     {
@@ -24,12 +25,20 @@ namespace NIT.HopZone.Web.Controllers
         public async Task<IActionResult> Post([FromBody]GraphQLQuery query)
         {
 
-            if (query == null) { throw new ArgumentNullException(nameof(query)); }
+
+            //if (query == null) { throw new ArgumentNullException(nameof(query)); }
+
+            var inputs = query.Variables?.ToInputs();
+
+            
+
 
             var executionOptions = new ExecutionOptions
             {
                 Schema = _schema,
-                Query = query.Query
+                Query = query.Query,
+                Inputs = inputs
+
             };
 
             try

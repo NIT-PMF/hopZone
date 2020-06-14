@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using NIT.HopZone.Web.Entitites.Context;
@@ -29,6 +30,15 @@ namespace NIT.HopZone.Web.Repository
         {
             throw new NotImplementedException();
         }
+
+        //dodo
+        public async Task<Admin> insert(Admin admin)
+        {
+            await _context.Admins.InsertOneAsync(admin);
+
+            return admin;
+           
+        } 
 
         public async Task<IEnumerable<Admin>> GetItemsAsync(string paramName, object paramValue)
         {

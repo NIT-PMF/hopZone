@@ -8,19 +8,22 @@ namespace NIT.HopZone.Web.Repository
 {
     public class NTPMutation : ObjectGraphType
     {
-        public NTPMutation(HopZoneData data)
+        public NTPMutation(ICollectionRepository<Role> adminRepository) // promjenili
         {
+
             Name = "Mutation";
 
-            Field<AdminType>(
-              "createAdmin",
+
+            Field<RoleType>( // promjenili
+              "createRole",
               arguments: new QueryArguments(
-                new QueryArgument<NonNullGraphType<AdminInputType>> { Name = "admin" }
+                new QueryArgument<NonNullGraphType<RoleInputType>> { Name = "role" }
               ),
               resolve: context =>
               {
-                  var admin = context.GetArgument<Admin>("admin");
-                  return data.AddAdmin(admin);
+                  var role = context.GetArgument<Role>("role"); //promjenili 
+
+                  return adminRepository.insert(role);
               });
         }
     }

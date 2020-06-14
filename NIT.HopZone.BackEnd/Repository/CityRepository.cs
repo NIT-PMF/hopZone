@@ -26,6 +26,14 @@ namespace NIT.HopZone.Web.Repository
                 .Find(_ => true)
                 .ToListAsync();
         }
+        public async Task<City> insert(City admin)
+        {
+            await _context.Cities.InsertOneAsync(admin);
+
+            return admin;
+
+        }
+
 
         public Task<City> GetItemAsync(string paramName, object paramValue)
         {

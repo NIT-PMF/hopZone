@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using NIT.HopZone.Web.Models;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace NIT.HopZone.Web.Repository
@@ -8,5 +9,8 @@ namespace NIT.HopZone.Web.Repository
         Task<IEnumerable<T>> GetItemsAsync(string paramName, object paramValue);
         Task<IEnumerable<T>> GetItemsAsync();
         Task<T> GetItemAsync(string paramName, object paramValue);
+
+        Task<T> insert(T role);
+        // u svim implementiratoi
     }
 }

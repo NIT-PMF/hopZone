@@ -37,6 +37,15 @@ namespace NIT.HopZone.Web.Repository
             throw new NotImplementedException();
         }
 
+        public async Task<Gender> insert(Gender admin)
+        {
+            await _context.Genders.InsertOneAsync(admin);
+
+            return admin;
+
+        }
+
+
         public Task<IEnumerable<Gender>> GetItemsAsync()
         {
             throw new NotImplementedException();

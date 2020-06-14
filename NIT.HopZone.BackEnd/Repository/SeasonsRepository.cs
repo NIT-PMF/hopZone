@@ -46,6 +46,15 @@ namespace NIT.HopZone.Web.Repository
             }
         }
 
+        public async Task<Season> insert(Season admin)
+        {
+            await _context.Seasons.InsertOneAsync(admin);
+
+            return admin;
+
+        }
+
+
         public async Task<Season> GetItemAsync(string paramName, object paramValue)
         {
             try

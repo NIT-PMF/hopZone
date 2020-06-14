@@ -19,6 +19,15 @@ namespace NIT.HopZone.Web.Repository
             _context = new Context(settings);
         }
 
+        public async Task<Contact> insert(Contact admin)
+        {
+            await _context.Contacts.InsertOneAsync(admin);
+
+            return admin;
+
+        }
+
+
         public async Task<IEnumerable<Contact>> GetAll()
         {
             return await _context

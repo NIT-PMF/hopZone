@@ -32,16 +32,15 @@ namespace NIT.HopZone.Web
             services.Configure<MongoSettings>(options =>
             {
                 options.ConnectionString
-                    = Configuration.GetSection("mongodb+srv://NIT:12345nit@cluster0-vd97p.mongodb.net/test?retryWrites=true&w=majority").Value;
+                    = Configuration.GetSection("MongoConnection:ConnectionString").Value;
                 options.Database
-                    = Configuration.GetSection("hopzone").Value;
+                    = Configuration.GetSection("MongoConnection:Database").Value;
             });
 
             services.AddScoped<NTPQuery>();
             services.AddScoped<NTPMutation>();
             services.AddScoped<IDocumentExecuter, DocumentExecuter>();
 
-            services.AddTransient<ITeamsCollectionRepository<Fixture>, FixturesRepository>();
             services.AddTransient<ICollectionRepository<Country>, CountriesRepository>();
             services.AddTransient<ICollectionRepository<Season>, SeasonsRepository>();
 
@@ -55,6 +54,7 @@ namespace NIT.HopZone.Web
             services.AddTransient<ICollectionRepository<City>, CityRepository>();
             services.AddTransient<ICollectionRepository<Contact>, ContactRepository>();
             services.AddTransient<ICollectionRepository<Gender>, GenderRepository>();
+            services.AddTransient<ICollectionRepository<Role>, RoleRepository>();
 
 
 
@@ -70,19 +70,16 @@ namespace NIT.HopZone.Web
             services.AddTransient<PostType>();
             services.AddTransient<ContactType>();
             services.AddTransient<CommentType>();
-            services.AddTransient<SeasonType>();
+            services.AddTransient<RoleType>();
             services.AddTransient<FixturesPredictionType>();
             services.AddTransient<BackEnd.InputTypes.AdminInputType>();
+            services.AddTransient<BackEnd.InputTypes.RoleInputType>();
+
             services.AddTransient<BackEnd.Data.HopZoneData>();
 
             var sp = services.BuildServiceProvider();
 
-            services.AddScoped<ISchema>(_ => new NTPSchema(type => (GraphType)sp.GetService(type))
-            {
-                Query = sp.GetService<NTPQuery>(),
-                Mutation = sp.GetService<NTPMutation>()
-            });
-
+            services.AddSingleton<ISchema>(new NTPSchema(new FuncDependencyResolver(type => sp.GetService(type))));
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -107,8 +104,7 @@ namespace NIT.HopZone.Web
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
-            app.UseGraphiQl();
-            app.UseGraphQLPlayground(options: new GraphQLPlaygroundOptions());
+            app.UseGraphiQl("/graphql");
 
 
             app.UseMvc(routes =>

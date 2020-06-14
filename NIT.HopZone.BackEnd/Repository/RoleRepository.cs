@@ -36,6 +36,15 @@ namespace NIT.HopZone.Web.Repository
         {
             throw new NotImplementedException();
         }
+        public async Task<Role> insert(Role admin)
+        {
+            await _context.Roles.InsertOneAsync(admin);
+
+            return admin;
+
+        }
+
+
 
         public Task<IEnumerable<Role>> GetItemsAsync()
         {
