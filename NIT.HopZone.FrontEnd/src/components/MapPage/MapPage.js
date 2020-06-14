@@ -7,12 +7,21 @@ import Route from './Route/Route';
 import './index.css';
 import marker_blue from '../../assets/images/marker.svg';
 import marker_red from '../../assets/images/marker_red.svg';
+import gql from 'graphql-tag';
+import { useQuery } from '@apollo/react-hooks';
+
 
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoidGFyaWsxMjMiLCJhIjoiY2s4cHY2czYxMGs0ZTNlbmxhcXhlOGZoYiJ9.aulPYqQ5WMIpgqa3w-eXhg'; // Set your mapbox token here
 
 
-
+const GET_ROLES = gql`
+{
+  roles{
+    id
+    authority
+  }
+}`;
 
 
 const mapAccess = {

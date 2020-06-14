@@ -14,9 +14,21 @@ namespace NIT.HopZone.Web.Queries
         (
             ICollectionRepository<Country> countriesRepository,
             ICollectionRepository<Season> seasonsRepository,
-            ICollectionRepository<Admin> adminsRepository
+            ICollectionRepository<Admin> adminsRepository,
+            ICollectionRepository<Role> roleRepository
          )
         {
+            Field<ListGraphType<RoleType>>(
+                "Roles",
+                resolve: ctx => roleRepository.GetAll());
+            Field<ListGraphType<RoleType>>(
+                "getRolebyid",
+                arguments: new QueryArguments(
+                    new QueryArgument<IntGraphType> { Name = "id" }),
+                resolve: ctx =>
+                {
+                    return roleRepository.GetAll();
+                });
 
             Field<AdminType>
             (

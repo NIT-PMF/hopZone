@@ -67,6 +67,14 @@ namespace NIT.HopZone.Web.Repository
             throw new System.NotImplementedException();
         }
 
+        public async Task<IEnumerable<Country>> GetAll()
+        {
+            return await _context
+                .Countries
+                .Find(_ => true)
+                .ToListAsync();
+        }
+
         public async Task<Country> insert(Country admin)
         {
             await _context.Countries.InsertOneAsync(admin);

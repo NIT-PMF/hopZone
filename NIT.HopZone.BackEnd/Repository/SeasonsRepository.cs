@@ -46,6 +46,14 @@ namespace NIT.HopZone.Web.Repository
             }
         }
 
+        public async Task<IEnumerable<Season>> GetAll()
+        {
+            return await _context
+                .Seasons
+                .Find(_ => true)
+                .ToListAsync();
+        }
+
         public async Task<Season> insert(Season admin)
         {
             await _context.Seasons.InsertOneAsync(admin);
