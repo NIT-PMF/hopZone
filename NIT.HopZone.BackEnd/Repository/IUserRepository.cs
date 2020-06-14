@@ -1,11 +1,13 @@
-﻿using NIT.HopZone.Web.Models;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using HopZone.Models;
 
-namespace NIT.HopZone.Web.Repository
+namespace NIT.HopZone.Web.NIT.HopZone.BackEnd.Repository
 {
-    public interface ICollectionRepository<T>
-    {
+        public interface IUserRepository<T>
+        {
         Task<IEnumerable<T>> GetItemsAsync(string paramName, object paramValue);
         Task<IEnumerable<T>> GetItemsAsync();
 

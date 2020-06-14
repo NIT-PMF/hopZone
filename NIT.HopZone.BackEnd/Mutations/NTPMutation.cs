@@ -1,29 +1,29 @@
 ﻿using GraphQL.Types;
-using NIT.HopZone.BackEnd.Data;
+using HopZone.Models;
 using NIT.HopZone.BackEnd.InputTypes;
-using NIT.HopZone.Web.Models;
+using NIT.HopZone.Web.NIT.HopZone.BackEnd.Repository;
 using NIT.HopZone.Web.Types;
 
 namespace NIT.HopZone.Web.Repository
 {
     public class NTPMutation : ObjectGraphType
     {
-        public NTPMutation(ICollectionRepository<Role> adminRepository) // promjenili
+        public NTPMutation(IUserRepository<User> userRepository)
         {
 
             Name = "Mutation";
 
 
-            Field<RoleType>( // promjenili
-              "createRole",
+            Field<UserType>(
+              "createUser",
               arguments: new QueryArguments(
-                new QueryArgument<NonNullGraphType<RoleInputType>> { Name = "role" }
+                new QueryArgument<NonNullGraphType<UserInputType>> { Name = "user" }
               ),
               resolve: context =>
               {
-                  var role = context.GetArgument<Role>("role"); //promjenili 
+                  var user = context.GetArgument<User>("user");
 
-                  return adminRepository.insert(role);
+                  return userRepository.insert(user);
               });
         }
     }

@@ -29,13 +29,19 @@
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="NIT.HopZone.BackEnd\Pages\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove="NIT.HopZone.BackEnd\Pages\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="NIT.HopZone.BackEnd\Pages\**" />
+    <None Remove="NIT.HopZone.BackEnd\Pages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="NIT.HopZone.BackEnd\Photos\" />
-    <Folder Include="NIT.HopZone.BackEnd\Pages\" />
     <Folder Include="NIT.HopZone.FrontEnd\src\api\" />
   </ItemGroup>
 
@@ -98,8 +104,6 @@
     </Exec>
     <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
     <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
-    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build --prod" />
-    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build:ssr --prod" Condition=" '$(BuildServerSideRenderer)' == 'true' " />
   </Target>
 
   <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">

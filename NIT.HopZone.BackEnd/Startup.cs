@@ -1,13 +1,14 @@
 using GraphiQl;
 using GraphQL;
-using GraphQL.Server.Ui.Playground;
 using GraphQL.Types;
+using HopZone.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NIT.HopZone.Web.Models;
+using NIT.HopZone.Web.NIT.HopZone.BackEnd.Repository;
 using NIT.HopZone.Web.Queries;
 using NIT.HopZone.Web.Repository;
 using NIT.HopZone.Web.Settings;
@@ -49,14 +50,12 @@ namespace NIT.HopZone.Web
             services.AddTransient<ICommentRepository<Comment>, CommentRepository>();
             services.AddTransient<IMapCoordinateRepository<MapCoordinate>, MapCoordinateRepository>();
             services.AddTransient<IPostRepository<Post>, PostRepository>();
+            services.AddTransient<IUserRepository<User>, UserRepository>();
 
             services.AddTransient<ICollectionRepository<Admin>, AdminRepository>();
             services.AddTransient<ICollectionRepository<City>, CityRepository>();
             services.AddTransient<ICollectionRepository<Contact>, ContactRepository>();
             services.AddTransient<ICollectionRepository<Gender>, GenderRepository>();
-            services.AddTransient<ICollectionRepository<Role>, RoleRepository>();
-
-
 
             services.AddTransient<FixtureType>();
             services.AddTransient<CountryType>();
@@ -73,7 +72,7 @@ namespace NIT.HopZone.Web
             services.AddTransient<RoleType>();
             services.AddTransient<FixturesPredictionType>();
             services.AddTransient<BackEnd.InputTypes.AdminInputType>();
-            services.AddTransient<BackEnd.InputTypes.RoleInputType>();
+            services.AddTransient<BackEnd.InputTypes.UserInputType>();
 
             services.AddTransient<BackEnd.Data.HopZoneData>();
 

@@ -36,13 +36,13 @@ namespace HopZone.Models
         public DateTime CreatedOn { get; set; } = DateTime.Now;
 
         [BsonRequired]
-        public City City { get; set; }
+        public string City { get; set; }
 
         [BsonRequired]
-        public Gender Gender { get; set; }
+        public string Gender { get; set; }
 
         [BsonRequired]
-        public Role Role { get; set; }
+        public int Role { get; set; } = 0;
 
         [BsonRequired]
         public bool Active { get; set; } = true;

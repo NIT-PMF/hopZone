@@ -16,9 +16,9 @@ namespace NIT.HopZone.Web.Types
             Field(_ => _.Password, type: typeof(StringGraphType));
             Field(_ => _.CreatedOn, type: typeof(IntGraphType)).Description("DateTime when Account was created");
             Field(_ => _.Active, type: typeof(BooleanGraphType)).Description("Is Account Active");
-            Field<CityType>(nameof(User.City));
-            Field<GenderType>(nameof(User.Gender));
-            Field<RoleType>(nameof(User.Role));
+            Field(_ => _.City, type: typeof(StringGraphType)).Description("Current origin");
+            Field(_ => _.Gender, type: typeof(StringGraphType)).Description("User Gender");
+            Field(_ => _.Role, type: typeof(IntGraphType)).Description("Permission Role of the user");
         }
     }
 }

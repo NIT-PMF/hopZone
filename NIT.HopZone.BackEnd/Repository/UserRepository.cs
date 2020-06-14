@@ -6,11 +6,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using NIT.HopZone.Web.Entitites.Context;
+using NIT.HopZone.Web.NIT.HopZone.BackEnd.Repository;
 using NIT.HopZone.Web.Settings;
 
 namespace NIT.HopZone.Web.Repository
 {
-    public class UserRepository : ICollectionRepository<User>
+    public class UserRepository : IUserRepository<User>
     {
         private readonly Context _context;
 
@@ -36,11 +37,11 @@ namespace NIT.HopZone.Web.Repository
             throw new NotImplementedException();
         }
 
-        public async Task<User> insert(User admin)
+        public async Task<User> insert(User user)
         {
-            await _context.Users.InsertOneAsync(admin);
+            await _context.Users.InsertOneAsync(user);
 
-            return admin;
+            return user;
 
         }
 
