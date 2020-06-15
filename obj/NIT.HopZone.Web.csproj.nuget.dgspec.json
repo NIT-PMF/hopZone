@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DaenerysPC\\Desktop\\hopzone project\\NIT.HopZone.Web.csproj": {}
+    "C:\\Users\\Tarik\\Desktop\\DWS - projekat\\HopZoneV2\\NIT.HopZone.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DaenerysPC\\Desktop\\hopzone project\\NIT.HopZone.Web.csproj": {
+    "C:\\Users\\Tarik\\Desktop\\DWS - projekat\\HopZoneV2\\NIT.HopZone.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DaenerysPC\\Desktop\\hopzone project\\NIT.HopZone.Web.csproj",
+        "projectUniqueName": "C:\\Users\\Tarik\\Desktop\\DWS - projekat\\HopZoneV2\\NIT.HopZone.Web.csproj",
         "projectName": "NIT.HopZone.Web",
-        "projectPath": "C:\\Users\\DaenerysPC\\Desktop\\hopzone project\\NIT.HopZone.Web.csproj",
-        "packagesPath": "C:\\Users\\DaenerysPC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DaenerysPC\\Desktop\\hopzone project\\obj\\",
+        "projectPath": "C:\\Users\\Tarik\\Desktop\\DWS - projekat\\HopZoneV2\\NIT.HopZone.Web.csproj",
+        "packagesPath": "C:\\Users\\Tarik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tarik\\Desktop\\DWS - projekat\\HopZoneV2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DaenerysPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tarik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
