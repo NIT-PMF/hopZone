@@ -35,6 +35,7 @@ namespace NIT.HopZone.Web.Controllers
         }
 
         [HttpPost]
+        
         public async Task<IActionResult> Post([FromBody]GraphQLQuery query)
         {
 

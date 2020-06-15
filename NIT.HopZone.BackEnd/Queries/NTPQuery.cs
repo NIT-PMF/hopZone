@@ -38,7 +38,20 @@ namespace NIT.HopZone.Web.Queries
                     return spotRepository.GetAll();
                 });
 
-           
+
+            Field<ListGraphType<SpotType>>(
+               "SpotsForUser",
+               resolve: ctx => spotRepository.GetAll());
+            Field<ListGraphType<SpotType>>(
+                "SpostByUsers",
+                arguments: new QueryArguments(
+                    new QueryArgument<StringGraphType> { Name = "username" }),
+                resolve: ctx =>
+                { 
+                    return spotRepository.getSpots("username", ctx.GetArgument<string>("username"));
+                });
+
+
             Field<AdminType>
             (
                 "admin",

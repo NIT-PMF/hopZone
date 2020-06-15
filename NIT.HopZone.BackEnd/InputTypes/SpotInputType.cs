@@ -21,6 +21,8 @@ namespace NIT.HopZone.BackEnd.InputTypes
             Field<StringGraphType>("logitude");
 
             Field<StringGraphType>("latitude");
+
+            Field<StringGraphType>("username");
         }
     }
 }

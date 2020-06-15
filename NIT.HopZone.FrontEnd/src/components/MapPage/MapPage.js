@@ -9,16 +9,9 @@ import marker_blue from '../../assets/images/marker.svg';
 import marker_red from '../../assets/images/marker_red.svg';
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
+import { useOktaAuth } from '@okta/okta-react';
 
-const GET_SPOTS = gql`
-{
-  spots{
-    id
-    description
-    logitude
-    latitude
-  }
-}`;
+
 
 
 
@@ -42,10 +35,19 @@ const MyInput = (props) => <input {...props} placeholder="Search city here" />
 
 
 
-export default function MapPage() {
+export default function MapPage(props) {
+
+
+  const GET_SPOTS = gql`
+{
+  spostByUsers(username: "${props.name}"){
+    description
+    logitude
+    latitude
+  }
+}`;
 
   const { loading, error, data } = useQuery(GET_SPOTS);
-
 
   const markerStyle = {
     transform: 'translate(-50%, -100%)',
@@ -65,14 +67,15 @@ export default function MapPage() {
   const [event, setEvent] = useState({});
 
   //const oldMarkers = [{ key: 0, langitude: 43, latitude: 17 }, { key: 1, langitude: 43, latitude: 18\
-    if (data != null) {
-      for (var i = 0; i < data.spots.length; i++) {
-        var e = { key: i, latitude: parseFloat(data.spots[i].logitude), langitude: parseFloat(data.spots[i].latitude) };
-        oldMarkers.push(e);
-        console.log()
-      }
+  if (data != null) {
+    console.log(data)
+    for (var i = 0; i < data.spostByUsers.length; i++) {
+      var e = { key: i, latitude: parseFloat(data.spostByUsers[i].logitude), langitude: parseFloat(data.spostByUsers[i].latitude) };
+      oldMarkers.push(e);
+      console.log()
     }
- 
+  }
+
   const oldRoutMarkers = [
     { key: 0, longitude: 43.89292808086501, latitude: 18.478331323240063 }, { key: 1, longitude: 43.945356108950406, latitude: 18.595747705076015 },
 
@@ -160,93 +163,100 @@ export default function MapPage() {
     setRoutMarkers(routeMarkers.filter(item => item.key === 0));
   }
 
+  const [name, setName] = useState("");
+
+
+  useEffect(() => {
+    setName(props.name);
+  }, [props.name])
+
 
   return (
-    <div className="conteiner">
+    <div style={{ transform: "translateX(-12%)" }}>
+      {name && console.log(name)}
+    { !name ? "" : (
+      <div className="conteiner">
+        <ReactMapGL
+          {...viewport}
+          width="100vw"
+          height="100vh"
+          mapStyle="mapbox://styles/tarik123/ck8pw5r7917r61iqjvn5knhrt"
+          onViewportChange={setViewport}
+          mapboxApiAccessToken={MAPBOX_TOKEN}
+          doubleClickZoom={false}
+          onClick={_onClick}
+          className="map"
+        >
+
+          <Source id='polylineLayer' type='geojson' data={polylineGeoJSON}>
+            <Layer
+              id='lineLayer'
+              type='line'
+              source='my-data'
+
+              paint={{
+                'line-color': 'rgba(3, 170, 238, 0.5)',
+                'line-width': 5,
+              }}
+            />
+          </Source>
+
+          {oldMarkers.map(m => (
+            <Marker key={m.key} latitude={m.langitude} longitude={m.latitude}>
+
+              <input type="image" src={marker_blue} style={markerStyle} />
+            </Marker>
+          ))}
+
+          {markers.map(m => (
+            <Marker key={m.key} latitude={m.longitude} longitude={m.latitude}>
+
+              <input type="image" src={marker_red} style={markerStyle} />
+            </Marker>
+          ))}
 
 
-      <ReactMapGL
-        {...viewport}
-        width="100vw"
-        height="100vh"
-        mapStyle="mapbox://styles/tarik123/ck8pw5r7917r61iqjvn5knhrt"
-        onViewportChange={setViewport}
-        mapboxApiAccessToken={MAPBOX_TOKEN}
-        doubleClickZoom={false}
-        onClick={_onClick}
-        className="map"
-      >
+          {routeMarkers.map(m => (
+            <Marker key={m.key} latitude={m.longitude} longitude={m.latitude}>
 
-        <Source id='polylineLayer' type='geojson' data={polylineGeoJSON}>
-          <Layer
-            id='lineLayer'
-            type='line'
-            source='my-data'
-
-            paint={{
-              'line-color': 'rgba(3, 170, 238, 0.5)',
-              'line-width': 5,
-            }}
-          />
-        </Source>
-
-        {oldMarkers.map(m => (
-          <Marker key={m.key} latitude={m.langitude} longitude={m.latitude}>
-
-            <input type="image" src={marker_blue} style={markerStyle} />
-          </Marker>
-        ))}
-
-        {markers.map(m => (
-          <Marker key={m.key} latitude={m.longitude} longitude={m.latitude}>
-
-            <input type="image" src={marker_red} style={markerStyle} />
-          </Marker>
-        ))}
+              <input type="image" src={marker_red} style={markerStyle} />
+            </Marker>
+          ))}
 
 
-        {routeMarkers.map(m => (
-          <Marker key={m.key} latitude={m.longitude} longitude={m.latitude}>
+          {oldRoutMarkers.map(m => (
+            <Marker key={m.key} latitude={m.longitude} longitude={m.latitude}>
 
-            <input type="image" src={marker_red} style={markerStyle} />
-          </Marker>
-        ))}
+              <input type="image" src={marker_red} style={markerStyle} />
+            </Marker>
+          ))}
 
+        </ReactMapGL>
+        <div className="overlay-nav">
+          <div className="PageSwitcher-map">
+            <NavLink exact to="/mappage" activeClassName="PageSwitcher__Item-map--Active" className="PageSwitcher__Item-map">Map</NavLink>
+            <NavLink to="/mappage/spot" activeClassName="PageSwitcher__Item-map--Active" className="PageSwitcher__Item-map">Spot</NavLink>
+            <NavLink to="/mappage/route" activeClassName="PageSwitcher__Item-map--Active" className="PageSwitcher__Item-map">Route</NavLink>
 
-        {oldRoutMarkers.map(m => (
-          <Marker key={m.key} latitude={m.longitude} longitude={m.latitude}>
-
-            <input type="image" src={marker_red} style={markerStyle} />
-          </Marker>
-        ))}
-
-      </ReactMapGL>
-      <div className="overlay-nav">
-        <div className="PageSwitcher-map">
-          <NavLink exact to="/mappage" activeClassName="PageSwitcher__Item-map--Active" className="PageSwitcher__Item-map">Map</NavLink>
-          <NavLink to="/mappage/spot" activeClassName="PageSwitcher__Item-map--Active" className="PageSwitcher__Item-map">Spot</NavLink>
-          <NavLink to="/mappage/route" activeClassName="PageSwitcher__Item-map--Active" className="PageSwitcher__Item-map">Route</NavLink>
+          </div>
 
         </div>
+          <RouteDom path="/mappage/spot/" exact
+            render={(props) => <Spot langitude={count[0]} latitude={count[1]} handler={handler} name={name}/>}>
+        </RouteDom>
+        <RouteDom path="/mappage/route" render={(props) => <Route {...props} langitude={count[0]} latitude={count[1]}
+          routeHandler={makeRoute} addedRouts={routeMarkers} deleteHandler={deleteSpotOnRoute} submitHandler={submitRoute} />}>
+        </RouteDom>
+
+        <Geocoder
+          {...mapAccess} onSelected={onSelected} viewport={viewport} hideOnSelect={true}
+          queryParams={queryParams} reverseGeocode="true" inputComponent={MyInput}
+        />
 
       </div>
-      <RouteDom path="/mappage/spot/" exact
-        render={(props) => <Spot {...props} langitude={count[0]} latitude={count[1]} handler={handler} />}>
-      </RouteDom>
-      <RouteDom path="/mappage/route" render={(props) => <Route {...props} langitude={count[0]} latitude={count[1]}
-        routeHandler={makeRoute} addedRouts={routeMarkers} deleteHandler={deleteSpotOnRoute} submitHandler={submitRoute} />}>
-      </RouteDom>
-
-      <Geocoder
-        {...mapAccess} onSelected={onSelected} viewport={viewport} hideOnSelect={true}
-        queryParams={queryParams} reverseGeocode="true" inputComponent={MyInput}
-      />
-
+      )}
     </div>
-
-
   );
-
 }
 
 

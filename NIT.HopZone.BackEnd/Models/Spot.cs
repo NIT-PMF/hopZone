@@ -12,6 +12,8 @@ namespace NIT.HopZone.Web.Models
         public string ImageURL { get; set; }
         public string Id_map_coordinate { get; set; }
 
+        public string username { get; set; }
+
         public string logitude { get; set; }
 
         public string latitude { get; set; }

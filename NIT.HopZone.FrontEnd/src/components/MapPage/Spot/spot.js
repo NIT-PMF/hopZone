@@ -7,6 +7,7 @@ import { useMutation } from '@apollo/react-hooks';
 const ADD_SPOT = gql` 
 mutation ($spot: SpotInputType!) {
   createSpot(spot: $spot) {
+    username
     description
     logitude
     latitude
@@ -19,6 +20,12 @@ export default function Spot(props) {
 
   const [addSpot, { loading,error }] = useMutation(ADD_SPOT);
   const [newSpot, setNewSpot] = useState({ description: "", logitude: "", latitude: "" });
+  const [name, setName] = useState("");
+
+  useEffect(() => {
+    setName(props.name)
+  }, [props.name])
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     console.log(name, value);
@@ -32,9 +39,10 @@ export default function Spot(props) {
   };
 
   const submitChange = e => {
-    
 
+   
     let s = {
+      "username": name,
       "description": newSpot.description,
       "latitude": props.latitude.toString(),
       "logitude": props.langitude.toString()

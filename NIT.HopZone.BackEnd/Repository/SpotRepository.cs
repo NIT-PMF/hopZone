@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
@@ -35,6 +36,20 @@ namespace NIT.HopZone.Web.Repository
         public Task<Spot> GetItemAsync(string paramName, object paramValue)
         {
             throw new System.NotImplementedException();
+        }
+
+        public async Task<IEnumerable<Spot>> getSpots(string username, string key)
+        {
+            try
+            {
+                return await _context.Spot
+                    .Find(Builders<Spot>.Filter.Eq(username, key))
+                    .ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public async Task<Spot> insert(Spot admin)

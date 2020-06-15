@@ -4,4 +4,5 @@ export { default as AboutPage } from './AboutPage/AboutPage';
 export { default as Footer } from './Footer/Footer';
 export { default as Account } from './Account/Account';
 export { default as Contact } from './Contact/Contact';
-export { default as Mappage } from './MapPage/MapPage';
+export { default as MapParant } from './MapPage/MapParant';
+export { default as Destination } from './Destination/Destination';

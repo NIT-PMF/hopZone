@@ -68,6 +68,7 @@ namespace NIT.HopZone.Web.Repository
 
                   return spotRepository.insert(spot);
               });
+
         }
     }
 }
