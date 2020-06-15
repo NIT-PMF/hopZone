@@ -226,3 +226,4 @@ C:\Users\DaenerysPC\Desktop\hopzone project\hopZone\obj\Debug\netcoreapp2.1\NIT.
 C:\Users\DaenerysPC\Desktop\hopzone project\hopZone\obj\Debug\netcoreapp2.1\NIT.HopZone.Web.csproj.CopyComplete
 C:\Users\DaenerysPC\Desktop\hopzone project\hopZone\bin\Debug\netcoreapp2.1\package-lock.json
 C:\Users\DaenerysPC\Desktop\hopzone project\hopZone\obj\Debug\netcoreapp2.1\NIT.HopZone.Web.csproj.CoreCompileInputs.cache
+C:\Users\Tarik\Desktop\DWS - projekat\HopZoneV2\bin\Debug\netcoreapp2.1\package-lock.json
