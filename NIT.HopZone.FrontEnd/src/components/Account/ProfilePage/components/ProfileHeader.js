@@ -1,24 +1,48 @@
-﻿import React from 'react';
-import './index.css';
+﻿import React from "react";
+import "./index.css";
 
-const ProfileHeader = () => {
-    return (
-        <div className="profile-page-header">
-            <div>
-                Followers: 2213
-            </div>
-            <div>
-                Rating: 4.5
-            </div>
-            <span className="header-horizontal-divider"></span>
-            <div>
-                Routes: 23
-            </div>
-            <div>
-                Joined: 20-20-2018
-            </div>
-        </div>
-    )
+function timeConverter(UNIX_timestamp) {
+  var a = new Date(UNIX_timestamp * 1000);
+  var months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  var year = a.getFullYear();
+  var month = months[a.getMonth()];
+  var date = a.getDate();
+  var hour = a.getHours();
+  var min = a.getMinutes();
+  var sec = a.getSeconds();
+  var time =
+    date + " " + month + " " + year + " " + hour + ":" + min + ":" + sec;
+  return time;
 }
+
+const ProfileHeader = ({ info }) => {
+  return (
+    <div className="profile-page-header">
+      <div>Followers: 0</div>
+      <div>Rating: 0</div>
+      <span className="header-horizontal-divider"></span>
+      <div>Routes: 0</div>
+      <div>
+        Joined:{" "}
+        {info.updated_at !== null
+          ? timeConverter(info.updated_at)
+          : "Jessica Jones"}
+      </div>
+    </div>
+  );
+};
 
 export default ProfileHeader;

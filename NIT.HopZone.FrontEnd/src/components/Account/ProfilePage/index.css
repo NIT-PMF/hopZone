@@ -1,9 +1,9 @@
 ﻿.profile-page-container {
-    position: relative;
-    display: block;
-    transform: translateX(15%);
-    width: 80%;
-    min-height: 80vh;
-    background-color: aliceblue;
-    border-radius: 15px;
+  position: relative;
+  display: block;
+  transform: translateX(15%);
+  width: 80%;
+  min-height: 80vh;
+  background-color: aliceblue;
+  border-radius: 15px;
 }
