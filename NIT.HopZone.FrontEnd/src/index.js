@@ -13,7 +13,6 @@ const client = new ApolloClient({
     console.log("networkError", networkError);
   },
 });
-
 ReactDOM.render(
   <ApolloProvider client={client}>
     <App />

@@ -88,14 +88,21 @@ namespace NIT.HopZone.Web
             services.AddTransient<CommentType>();
             services.AddTransient<RoleType>();
             services.AddTransient<FixturesPredictionType>();
+
             services.AddTransient<BackEnd.InputTypes.AdminInputType>();
+
             services.AddTransient<BackEnd.InputTypes.UserInputType>();
             services.AddTransient<BackEnd.InputTypes.ContactInputType>();
+            
+            services.AddTransient<BackEnd.InputTypes.RouteInputType>();
+            services.AddTransient<BackEnd.InputTypes.SpotInputType>();
 
             //Authentication
             services.AddSingleton<IValidationRule, AuthValidationRule>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddIdentityServer();
+
+            
 
             services.AddTransient<BackEnd.Data.HopZoneData>();
 

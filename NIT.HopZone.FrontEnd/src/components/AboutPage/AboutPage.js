@@ -5,8 +5,6 @@ import './index.css';
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
 
-
-
 const GET_ROLES = gql`
 {
   roles{
@@ -17,8 +15,6 @@ const GET_ROLES = gql`
 
 
 const AboutPage = () => {
-
-  const { loading, error, data } = useQuery(GET_ROLES);
 
   
 
@@ -46,7 +42,6 @@ const AboutPage = () => {
 
   return (
     <div className="about-page-main">
-      {!loading && console.log(data)}
       <div className="about-page-content">
         <Header1 size="2rem" color="white"> About Us </Header1>
 

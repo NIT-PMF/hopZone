@@ -12,7 +12,8 @@ namespace NIT.HopZone.Web.Types
             Field(_ => _.ImageURL, type: typeof(StringGraphType));
             Field(_ => _.Id_map_coordinate, type: typeof(StringGraphType));
             Field(_ => _.Id_city, type: typeof(StringGraphType));
-
+            Field(_ => _.latitude, type: typeof(StringGraphType));
+            Field(_ => _.logitude, type: typeof(StringGraphType));
         }
 
     }

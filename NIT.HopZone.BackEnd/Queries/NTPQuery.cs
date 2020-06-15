@@ -20,10 +20,25 @@ namespace NIT.HopZone.Web.Queries
             ICollectionRepository<Season> seasonsRepository,
             ICollectionRepository<Admin> adminsRepository,
             IUserRepository<User> userRepository,
-            IContactRepository<Contact> contactReppsitory
+            IContactRepository<Contact> contactReppsitory,
+            ISpotRepository<Spot> spotRepository
          )
+     
         {
 
+            Field<ListGraphType<SpotType>>(
+               "Spots",
+               resolve: ctx => spotRepository.GetAll());
+            Field<ListGraphType<SpotType>>(
+                "getSpotbyid",
+                arguments: new QueryArguments(
+                    new QueryArgument<IntGraphType> { Name = "id" }),
+                resolve: ctx =>
+                {
+                    return spotRepository.GetAll();
+                });
+
+           
             Field<AdminType>
             (
                 "admin",

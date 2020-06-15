@@ -6,6 +6,9 @@ namespace NIT.HopZone.Web.Repository
 {
     public interface IRouteRepository<T>
     {
-        Task<List<Route>> GetAllAsync();
+        Task<IEnumerable<T>> GetAll();
+        Task<T> GetItemAsync(string paramName, object paramValue);
+
+        Task<T> insert(T role);
     }
 }

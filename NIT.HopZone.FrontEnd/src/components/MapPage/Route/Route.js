@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, Component } from "react";
+import React, { useState, useEffect, Component } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
 
 

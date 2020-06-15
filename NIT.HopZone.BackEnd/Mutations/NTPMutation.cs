@@ -10,7 +10,13 @@ namespace NIT.HopZone.Web.Repository
 {
     public class NTPMutation : ObjectGraphType
     {
-        public NTPMutation(IUserRepository<User> userRepository, IContactRepository<Contact> contactRepository)
+        public NTPMutation(
+            ISpotRepository<Spot> spotRepository,
+            IRouteRepository<Route> routeRepository,
+            IUserRepository<User> userRepository, 
+            IContactRepository<Contact> contactRepository
+           ) // promjenili
+
         {
 
             Name = "Mutation";
@@ -37,6 +43,30 @@ namespace NIT.HopZone.Web.Repository
                   var contactForm = context.GetArgument<Contact>("contact");
 
                   return contactRepository.add(contactForm);
+              });
+
+            Field<RouteType>( // promjenili
+              "createRoute",
+              arguments: new QueryArguments(
+                new QueryArgument<NonNullGraphType<RouteInputType>> { Name = "route" }
+              ),
+              resolve: context =>
+              {
+                  var route = context.GetArgument<Route>("route"); //promjenili 
+
+                  return routeRepository.insert(route);
+              });
+
+            Field<SpotType>( // promjenili
+              "createSpot",
+              arguments: new QueryArguments(
+                new QueryArgument<NonNullGraphType<SpotInputType>> { Name = "spot" }
+              ),
+              resolve: context =>
+              {
+                  var spot = context.GetArgument<Spot>("spot"); //promjenili 
+
+                  return spotRepository.insert(spot);
               });
         }
     }

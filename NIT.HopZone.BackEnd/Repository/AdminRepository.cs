@@ -68,5 +68,10 @@ namespace NIT.HopZone.Web.Repository
                 throw ex;
             }
         }
+
+        public object insert(Route route)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

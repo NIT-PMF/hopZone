@@ -12,6 +12,9 @@ namespace NIT.HopZone.Web.Repository
         Task<IEnumerable<T>> GetAll();
         Task<T> GetItemAsync(string paramName, object paramValue);
 
-        Task<T> insert(T user);
+        Task<T> insert(T role);
+
+
+        // u svim implementiratoi
     }
 }

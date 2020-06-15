@@ -53,6 +53,7 @@ namespace AspNetCore
             EndContext();
             BeginContext(58, 100, false);
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40b2a2fab768413f847e2b944f3ace7a", async() => {
+
                 BeginContext(64, 87, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>Index</title>\r\n");
                 EndContext();
@@ -73,6 +74,7 @@ namespace AspNetCore
             EndContext();
             BeginContext(160, 26, false);
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4619bd9dada2471ab70fd19cf87e1492", async() => {
+
                 BeginContext(166, 6, true);
                 WriteLiteral("\r\n    ");
                 EndContext();

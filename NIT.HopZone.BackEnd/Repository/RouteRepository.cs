@@ -17,11 +17,31 @@ namespace NIT.HopZone.Web.Repository
             _context = new Context(settings);
         }
 
+        public async Task<IEnumerable<Route>> GetAll()
+        {
+            return await _context.Route
+                     .Find(_ => true)
+                     .ToListAsync();
+        }
+
         public async Task<List<Route>> GetAllAsync()
         {
             return await _context.Route
                        .Find(_ => true)
                        .ToListAsync();
+        }
+
+        public Task<Route> GetItemAsync(string paramName, object paramValue)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public async Task<Route> insert(Route admin)
+        {
+            await _context.Route.InsertOneAsync(admin);
+
+            return admin;
+
         }
     }
 }
