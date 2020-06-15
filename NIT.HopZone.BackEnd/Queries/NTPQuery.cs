@@ -88,7 +88,7 @@ namespace NIT.HopZone.Web.Queries
                 resolve: context => userRepository
                     .GetUserByUsername("Username", context.GetArgument<string>("username"))
                     .Result
-            ).AddPermissions("user");
+            );
 
             Field<CountryType>
             (

@@ -64,16 +64,14 @@ export default function MapPage() {
 
   const [event, setEvent] = useState({});
 
-  //const oldMarkers = [{ key: 0, langitude: 43, latitude: 17 }, { key: 1, langitude: 43, latitude: 18
- 
-  if (data != null) {
-    for (var i = 0; i < data.spots.length; i++) {
-      var e = { key: i, latitude: parseFloat(data.spots[i].logitude), langitude: parseFloat(data.spots[i].latitude) };
-      oldMarkers.push(e);
-      console.log()
+  //const oldMarkers = [{ key: 0, langitude: 43, latitude: 17 }, { key: 1, langitude: 43, latitude: 18\
+    if (data != null) {
+      for (var i = 0; i < data.spots.length; i++) {
+        var e = { key: i, latitude: parseFloat(data.spots[i].logitude), langitude: parseFloat(data.spots[i].latitude) };
+        oldMarkers.push(e);
+        console.log()
+      }
     }
-  }
-  
  
   const oldRoutMarkers = [
     { key: 0, longitude: 43.89292808086501, latitude: 18.478331323240063 }, { key: 1, longitude: 43.945356108950406, latitude: 18.595747705076015 },

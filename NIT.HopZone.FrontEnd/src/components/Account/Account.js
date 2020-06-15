@@ -1,9 +1,12 @@
-﻿import React from 'react';
+import React from 'react';
 import './index.css';
 import { Route, Switch } from 'react-router-dom';
 import SignUpForm from './Signup/Signup';
 import LoginForm from './Login/Login';
 import ProfilePage from './ProfilePage/ProfilePage';
+import { Security, SecureRoute, LoginCallback } from '@okta/okta-react';
+
+
 
 const AccountPage = () => {
 
@@ -14,7 +17,7 @@ const AccountPage = () => {
                 <Switch>
                     <Route path="/account/signup" exact component={SignUpForm}>
                     </Route>
-                    <Route path="/account/login" exact component={LoginForm}>
+            <Route path="/account/login" exact component={LoginCallback}>
                     </Route>
                     <Route path="/account/:userID" component={ProfilePage}>
                     </Route>

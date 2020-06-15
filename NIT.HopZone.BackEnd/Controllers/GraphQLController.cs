@@ -47,10 +47,10 @@ namespace NIT.HopZone.Web.Controllers
             {
                 Schema = _schema,
                 Query = query.Query,
-                ValidationRules = new List<IValidationRule> { _validationRule },
+                //ValidationRules = new List<IValidationRule> { _validationRule },
                 UserContext = _httpContextAccessor.HttpContext.User,
                 Inputs = inputs,
-                ComplexityConfiguration = new GraphQL.Validation.Complexity.ComplexityConfiguration { MaxDepth = 15 }
+                //ComplexityConfiguration = new GraphQL.Validation.Complexity.ComplexityConfiguration { MaxDepth = 15 }
         };
 
             try

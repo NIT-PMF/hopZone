@@ -93,7 +93,7 @@ namespace NIT.HopZone.Web
 
             services.AddTransient<BackEnd.InputTypes.UserInputType>();
             services.AddTransient<BackEnd.InputTypes.ContactInputType>();
-            
+
             services.AddTransient<BackEnd.InputTypes.RouteInputType>();
             services.AddTransient<BackEnd.InputTypes.SpotInputType>();
 
@@ -102,7 +102,7 @@ namespace NIT.HopZone.Web
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddIdentityServer();
 
-            
+
 
             services.AddTransient<BackEnd.Data.HopZoneData>();
 

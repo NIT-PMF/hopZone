@@ -4,6 +4,9 @@ import { Navbar, Homepage, AboutPage, Contact, Account, Mappage} from './compone
 // import { renderRoutes } from 'react-router-config';
 //import './App.scss';
 import './App.css';
+import { Security, SecureRoute, LoginCallback } from '@okta/okta-react';
+import Layout from './Layout';
+
 
 const loading = () => <div className="animated fadeIn pt-3 text-center">Loading...</div>;
 
@@ -20,26 +23,38 @@ const App = () => {
   const isHeaderRoute = (!window.location.pathname.includes('admin'))
 
   return (
+
     < BrowserRouter >
-      <div className="App">
-        { isHeaderRoute && <Navbar /> }
+
+      <Security issuer='https://dev-843663.okta.com/oauth2/default'
+        clientId='0oafbmel4SfUPoCfT4x6'
+        redirectUri='https://localhost:44309/account/login'
+        pkce={true}>
+        <Layout>
+        <div className="App">
+          
+            {isHeaderRoute && <Navbar /> }
           
         <React.Suspense fallback={loading()}>
           <Switch>
             <Route path="/" exact component={Homepage} />
             <Route path="/about" component={AboutPage} />
             <Route path="/account" component={Account} />
-            <Route path="/contact" exact component={Contact}></Route>
-            <Route path="/mappage"  component={Mappage}></Route>
+              <Route path="/contact" exact component={Contact}></Route>
+                <Route path='/implicit/callback' component={LoginCallback}/>
+            <SecureRoute path="/mappage"  component={Mappage}></SecureRoute>
             <Route exact path="/admin/login" name="Login Page" render={props => <Login {...props} />} />
             <Route exact path="/admin/register" name="Register Page" render={props => <Register {...props} />} />
             <Route exact path="/404" name="Page 404" render={props => <Page404 {...props} />} />
             <Route exact path="/500" name="Page 500" render={props => <Page500 {...props} />} />
-            <Route path="/admin" name="Home" render={props => <DefaultLayout {...props} />} />
+            <SecureRoute path="/admin" name="Home" render={props => <DefaultLayout {...props} />} />
           </Switch>
         </React.Suspense>
-      </div>
-    </BrowserRouter >
+          </div>
+        </Layout>
+         </Security>
+      </BrowserRouter >
+   
   )
 }
 

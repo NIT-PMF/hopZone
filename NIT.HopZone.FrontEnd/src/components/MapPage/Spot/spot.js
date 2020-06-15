@@ -32,7 +32,6 @@ export default function Spot(props) {
   };
 
   const submitChange = e => {
-    e.preventDefault();
     
 
     let s = {
@@ -41,8 +40,7 @@ export default function Spot(props) {
       "logitude": props.langitude.toString()
     };
 
-    props.handler({ key: "158684844", langitude: props.langitude, latitude: props.latitude });
-
+    
     addSpot({ variables: { spot: s } });
     setNewSpot({})
   }
