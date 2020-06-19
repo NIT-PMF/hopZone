@@ -13,3 +13,4 @@ Discover new places to take pictures to upgrade your social status and gain know
 
 <br /> Figma: https://www.figma.com/file/yokyZrp4W2GcyPKLIeVXa6/HopZone?node-id=0%3A1 
 <br /> Documentation: https://drive.google.com/file/d/1WVDyuz4CouyOw3kwYbnhi9v_8HCRjf2A/view
+<br /> Video: https://www.youtube.com/watch?v=j73pLy-OVfg&feature=youtu.be
